@@ -33,6 +33,11 @@ All available options can be used from Appearance->Customize
 
 == Changelog ==
 
+= Version 1.0.2 =
+* Footer developer backlinks are reserved and optimized
+* Page title reformatted
+* Brand new scrollbar according to theme color
+
 = Version 1.0.1 =
 * Minor Tweaks are done
 * Visibility of Archive Header, Search Header are on by Default

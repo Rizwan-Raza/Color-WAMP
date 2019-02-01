@@ -170,7 +170,7 @@
     let fElem = document.querySelectorAll('footer.primary .right');
     const provider = '<p class="my-1 text-primary-light"><a href="https://blog.wampinfotech.com/" class="white-text"><strong>Color WAMP</strong></a> by <a href="https://www.wampinfotech.com/" class="white-text"><strong>WAMP Infotech</strong></a></p>'
     if(fElem.length > 0) {
-      if(fElem[0].innerText.search("Theme WAMP by WAMP Infotech") == -1) {
+      if(fElem[0].innerText.search("Color WAMP by WAMP Infotech") == -1) {
         let node = document.createElement("DIV");
         node.classList.add("right");
         node.innerHTML = provider;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        <?php wp_title(); ?>
+        <?php wp_title(' | ', true, 'right'); ?> <?php bloginfo('name'); ?>
     </title>
 
 
@@ -22,7 +22,8 @@
     <style>
     .primary,
 .primary-hover:hover,
-#footer::before {
+#footer::before
+ {
     background-color: <?php echo get_theme_mod("color_wamp_theme_color_setting", "#3d85c6")?> !important;
 }
 
@@ -37,7 +38,20 @@ a {
 .nav-content {
     position: <?php echo get_theme_mod("color_wamp_sticky_header_setting", 1) ? "sticky": "static"?> !important;
 }
+    
     </style>
+    <?php if (get_theme_mod("color_wamp_theme_color_setting", "#3d85c6") != "#3d85c6") {
+    ?>
+        <style>
+        ::-webkit-scrollbar-thumb,
+        ::-webkit-scrollbar-thumb:hover,
+        ::-webkit-scrollbar-thumb:active,
+        ::-webkit-scrollbar-thumb:focus {
+            background-color: <?php echo get_theme_mod("color_wamp_theme_color_setting", "#3d85c6")?>
+        }
+        </style>
+        <?php
+} ?>
 </head>
 
 <body <?php body_class("custom-background")?>>
