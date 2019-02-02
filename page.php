@@ -11,7 +11,6 @@
 <?php
     } ?>
 <div class="row px-4">
-    <div class="row px-4">
         <div class="col s12 l8">
         <?php
         if (have_posts()) {
@@ -43,7 +42,6 @@
         get_template_part("no-sidebar");
     }
     ?>
-    </div>
     </div>
 </div>
 <?php get_footer(); ?>
