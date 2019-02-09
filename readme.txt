@@ -37,6 +37,9 @@ All available options can be used from Appearance->Customize
 * Footer developer backlinks are reserved and optimized
 * Page title reformatted
 * Brand new scrollbar according to theme color
+* Footer Widgets added
+* Footer Navigation removed
+* Google Plus social link and icon is replaced with Tumblr
 
 = Version 1.0.1 =
 * Minor Tweaks are done

@@ -19,8 +19,7 @@
         register_nav_menus(
             array(
                 'main-header-menu' => 'Main Header Menu',
-                'main-sidebar-menu' => 'Main Mobile Sidebar Menu',
-                'footer-menu' => 'Footer Menu'
+                'main-sidebar-menu' => 'Main Mobile Sidebar Menu'
             )
         );
     }
@@ -152,6 +151,36 @@
             "before_title"=>"<h4>",
             "after_title"=>"</h4><br />"
         ));
+
+        register_sidebar(array(
+            "name"=>__("Footer #1", "color-wamp"),
+            "id"=>"footer_01",
+            "description" => __("Widgets in this area will be shown on Footer first column", "color-wamp"),
+            "before_widget"=>"",
+            "after_widget"=>"",
+            "before_title"=>"<h5>",
+            "after_title"=>"</h5>"
+        ));
+
+        register_sidebar(array(
+            "name"=>__("Footer #2", "color-wamp"),
+            "id"=>"footer_02",
+            "description" => __("Widgets in this area will be shown on Footer second column", "color-wamp"),
+            "before_widget"=>"",
+            "after_widget"=>"",
+            "before_title"=>"<h5>",
+            "after_title"=>"</h5>"
+        ));
+
+        register_sidebar(array(
+            "name"=>__("Footer #3", "color-wamp"),
+            "id"=>"footer_03",
+            "description" => __("Widgets in this area will be shown on Footer third column", "color-wamp"),
+            "before_widget"=>"",
+            "after_widget"=>"",
+            "before_title"=>"<h5>",
+            "after_title"=>"</h5>"
+        ));
     }
 
     add_action("widgets_init", "color_wamp_widget_registration");
@@ -216,15 +245,10 @@
             'title'   => 'Twitter',
             'default' => '#',
         ),
-        'color_wamp_social_googleplus' => array(
-            'id'      => 'color_wamp_social_googleplus',
-            'title'   => 'Google-Plus',
-            'default' => '#',
-        ),
         'color_wamp_social_linkedin'  => array(
             'id'      => 'color_wamp_social_linkedin',
             'title'   => 'Linkedin',
-            'default' => '',
+            'default' => '#',
         ),
         'color_wamp_social_instagram'  => array(
             'id'      => 'color_wamp_social_instagram',
@@ -241,6 +265,11 @@
             'title'   => 'YouTube',
             'default' => '',
         ),
+        'color_wamp_social_tumblr' => array(
+            'id'      => 'color_wamp_social_tumblr',
+            'title'   => 'Tumblr',
+            'default' => '',
+        )
     );
 
         $i = 20;

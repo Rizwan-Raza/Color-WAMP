@@ -1,14 +1,42 @@
 <section class="white-text m-0" id="footer">
   <div class="row p-4 m-0">
-    <div class="col s12 m6">
+    <?php
+    $medium = 6;
+    $mRowWrap = false;
+    $fm = 4;
+    $fl = 4;
+    if (is_active_sidebar("footer_01")) {
+        if (is_active_sidebar("footer_02")) {
+            $medium = 4;
+            $fm = 3;
+            $fl = 3;
+            if (is_active_sidebar("footer_03")) {
+                $medium = 4;
+                $mRowWrap = true;
+                $fm = 4;
+                $fl = 4;
+            }
+        } elseif (is_active_sidebar("footer_03")) {
+            $medium = 4;
+            $fm = 3;
+            $fl = 3;
+        }
+    } elseif (is_active_sidebar("footer_02")) {
+        if (is_active_sidebar("footer_03")) {
+            $medium = 4;
+            $fm = 3;
+            $fl = 3;
+        }
+    } ?>
+    <div class="col s12 m<?php echo $medium ?> mb-2">
       <?php if (has_custom_logo()) {
-    ?>
+        ?>
       <div class="left mr-2 logo">
         <img src="<?php echo esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo', get_template_directory_uri().'/images/wamp-round-logo.png'), "
           full")[0])?>" alt="<?php echo get_bloginfo('name')?>" />
       </div>
       <?php
-} ?>
+    } ?>
       <div class="left">
         <h5 class="my-1"><strong>
             <?php echo get_bloginfo("title")?></strong></h5>
@@ -23,7 +51,7 @@
         <h5>Follow Us:</h5>
         <?php if (!empty(get_theme_mod("color_wamp_social_facebook", "#"))) {
             ?>
-        <a href="<?php echo get_theme_mod(" color_wamp_social_facebook")?>"
+        <a href="<?php echo get_theme_mod("color_wamp_social_facebook")?>"
           <?php echo get_theme_mod("color_wamp_social_facebook_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle facebook">
           <img src="<?php echo get_template_directory_uri()?>/images/facebook-f-brands.svg" alt="Facebook Icon" />
@@ -32,25 +60,16 @@
         }
         if (!empty(get_theme_mod("color_wamp_social_twitter", "#"))) {
             ?>
-        <a href="<?php echo get_theme_mod(" color_wamp_social_twitter")?>"
+        <a href="<?php echo get_theme_mod("color_wamp_social_twitter")?>"
           <?php echo get_theme_mod("color_wamp_social_twitter_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle twitter">
           <img src="<?php echo get_template_directory_uri()?>/images/twitter-brands.svg" alt="Twitter Icon"/>
         </a>
         <?php
         }
-        if (!empty(get_theme_mod("color_wamp_social_googleplus", "#"))) {
+        if (!empty(get_theme_mod("color_wamp_social_linkedin", "#"))) {
             ?>
-        <a href="<?php echo get_theme_mod(" color_wamp_social_googleplus")?>"
-          <?php echo get_theme_mod("color_wamp_social_googleplus_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
-          btn-flat waves-effect waves-light waves-circle google-plus">
-          <img src="<?php echo get_template_directory_uri()?>/images/google-plus-g-brands.svg" alt="Google Plus Icon"/>
-        </a>
-        <?php
-        }
-        if (!empty(get_theme_mod("color_wamp_social_linkedin"))) {
-            ?>
-        <a href="<?php echo get_theme_mod(" color_wamp_social_linkedin")?>"
+        <a href="<?php echo get_theme_mod("color_wamp_social_linkedin")?>"
           <?php echo get_theme_mod("color_wamp_social_linkedin_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle linkedin">
           <img src="<?php echo get_template_directory_uri()?>/images/linkedin-in-brands.svg" alt="LinkedIn Icon" />
@@ -59,7 +78,7 @@
         }
         if (!empty(get_theme_mod("color_wamp_social_instagram"))) {
             ?>
-        <a href="<?php echo get_theme_mod(" color_wamp_social_instagram")?>"
+        <a href="<?php echo get_theme_mod("color_wamp_social_instagram")?>"
           <?php echo get_theme_mod("color_wamp_social_instagram_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle instagram">
           <img src="<?php echo get_template_directory_uri()?>/images/instagram-brands.svg" alt="Instagram Icon"/>
@@ -68,7 +87,7 @@
         }
         if (!empty(get_theme_mod("color_wamp_social_pinterest"))) {
             ?>
-        <a href="<?php echo get_theme_mod(" color_wamp_social_pinterest")?>"
+        <a href="<?php echo get_theme_mod("color_wamp_social_pinterest")?>"
           <?php echo get_theme_mod("color_wamp_social_pinterest_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle pinterest">
           <img src="<?php echo get_template_directory_uri()?>/images/pinterest-p-brands.svg" alt="Pinterest Icon" />
@@ -77,39 +96,70 @@
         }
         if (!empty(get_theme_mod("color_wamp_social_youtube"))) {
             ?>
-        <a href="<?php echo get_theme_mod(" color_wamp_social_youtube")?>"
+        <a href="<?php echo get_theme_mod("color_wamp_social_youtube")?>"
           <?php echo get_theme_mod("color_wamp_social_youtube_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle youtube">
           <img src="<?php echo get_template_directory_uri()?>/images/youtube-brands.svg" alt="YouTube Icon"/>
         </a>
         <?php
+        }
+        if (!empty(get_theme_mod("color_wamp_social_tumblr"))) {
+            ?>
+      <a href="<?php echo get_theme_mod("color_wamp_social_tumblr")?>"
+        <?php echo get_theme_mod("color_wamp_social_tumblr_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
+        btn-flat waves-effect waves-light waves-circle tumblr">
+        <img src="<?php echo get_template_directory_uri()?>/images/tumblr-brands.svg" alt="Tumblr Icon"/>
+      </a>
+      <?php
         } ?>
         <br />
       </div>
       <?php
     } ?>
     </div>
-    <div class="col s12 m4">
-      <h5>Quick Links</h5>
-      <ul>
-        <?php
-        if (has_nav_menu("footer-menu")) {
-            wp_nav_menu(array(
-            'theme_location' => 'footer-menu',
-            'container' => '',
-            'items_wrap' => '%3$s'
-        ));
-        } else {
-            ?>
-        <li><a href="<?php echo get_home_url()?>">Home</a></li>
-        <li><a href="javascript:;">Add more links from WordPress</a></li>
-        <?php
-        }
-    ?>
-      </ul>
+    <?php if ($mRowWrap) {
+        ?>
+      <div class="col s12 l6"><div class="row">
+    <?php
+    } ?>
+
+    <?php if (is_active_sidebar("footer_01")) {
+        ?>
+    <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>">
+        <?php dynamic_sidebar("footer_01"); ?>
 
     </div>
-    <div class="col s12 m2">
+    <?php
+    } else {
+        ?>
+      <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>">Add some widgets from Admin Panel</div>
+      <?php
+    }?>
+    <?php if (is_active_sidebar("footer_02")) {
+        ?>
+    <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>">
+        <?php dynamic_sidebar("footer_02"); ?>
+
+    </div>
+    <?php
+    }?>
+    <?php if (is_active_sidebar("footer_03")) {
+        ?>
+    <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>">
+        <?php dynamic_sidebar("footer_03"); ?>
+
+    </div>
+    <?php
+    }?>
+
+<?php if ($mRowWrap) {
+        ?>
+      </div></div>
+    <?php
+    } ?>
+
+
+    <div class="col s12 m<?php echo $mRowWrap ? '12' : '2' ?> l2 right">
       <button class="btn btn-floating btn-large white waves-effect right"><i class="material-icons primary-text"
           onclick="scrollToTop(200,3)">arrow_upward</i></button>
     </div>

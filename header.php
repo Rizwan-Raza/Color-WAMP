@@ -88,12 +88,7 @@ a {
                     <li><a href="<?php echo get_theme_mod("color_wamp_social_twitter")?>" <?php echo get_theme_mod("color_wamp_social_twitter_checkbox") ? "target='_blank'" : ""?> class="btn-floating btn-flat waves-effect waves-dark waves-circle twitter"><img src="<?php echo get_template_directory_uri()?>/images/twitter-brands.svg" alt="Twitter Icon" /></a></li>
                     <?php
         }
-        if (!empty(get_theme_mod("color_wamp_social_googleplus", "#google-plus"))) {
-            ?>
-                    <li><a href="<?php echo get_theme_mod("color_wamp_social_googleplus")?>" <?php echo get_theme_mod("color_wamp_social_googleplus_checkbox") ? "target='_blank'" : ""?> class="btn-floating btn-flat waves-effect waves-dark waves-circle google-plus"><img src="<?php echo get_template_directory_uri()?>/images/google-plus-g-brands.svg" alt="Google Plus Icon" /></a></li>
-                <?php
-        }
-        if (!empty(get_theme_mod("color_wamp_social_linkedin"))) {
+        if (!empty(get_theme_mod("color_wamp_social_linkedin", "#linkedin"))) {
             ?>
         <li><a href="<?php echo get_theme_mod("color_wamp_social_linkedin")?>" <?php echo get_theme_mod("color_wamp_social_linkedin_checkbox") ? "target='_blank'" : ""?> class="btn-floating btn-flat waves-effect waves-dark waves-circle linkedin"><img src="<?php echo get_template_directory_uri()?>/images/linkedin-in-brands.svg"  alt="LinkedIn Icon"/></a></li>
         <?php
@@ -112,8 +107,14 @@ a {
             ?>
         <li><a href="<?php echo get_theme_mod("color_wamp_social_youtube")?>" <?php echo get_theme_mod("color_wamp_social_youtube_checkbox") ? "target='_blank'" : ""?> class="btn-floating btn-flat waves-effect waves-dark waves-circle youtube"><img src="<?php echo get_template_directory_uri()?>/images/youtube-brands.svg"  alt="YouTube Icon" /></a></li>
         <?php
+        }
+        if (!empty(get_theme_mod("color_wamp_social_tumblr"))) {
+            ?>
+                    <li><a href="<?php echo get_theme_mod("color_wamp_social_tumblr")?>" <?php echo get_theme_mod("color_wamp_social_tumblr_checkbox") ? "target='_blank'" : ""?> class="btn-floating btn-flat waves-effect waves-dark waves-circle tumblr"><img src="<?php echo get_template_directory_uri()?>/images/tumblr-brands.svg" alt="Tumblr Icon" /></a></li>
+                <?php
         } ?>
-                </ul>
+            
+            </ul>
                 <ul id="nav-mobile" class="right hide-on-large-only">
                 <li><a href="#" class="dropdown-trigger btn-floating btn-flat waves-effect waves-dark waves-circle transparent"
                             data-target='mobile_more_social'><i class="material-icons">more_vert</i></a></li>
@@ -174,12 +175,7 @@ a {
                     <li><a href="<?php echo get_theme_mod("color_wamp_social_twitter")?>" <?php echo get_theme_mod("color_wamp_social_twitter_checkbox") ? "target='_blank'" : ""?>><img class="left mr-2" src="<?php echo get_template_directory_uri()?>/images/twitter-brands.svg"  alt="Twitter Icon" /> Twitter</a></li>
                     <?php
     }
-    if (!empty(get_theme_mod("color_wamp_social_googleplus", "#google-plus"))) {
-        ?>
-                    <li><a href="<?php echo get_theme_mod("color_wamp_social_googleplus")?>" <?php echo get_theme_mod("color_wamp_social_googleplus_checkbox") ? "target='_blank'" : ""?>><img class="left mr-2" src="<?php echo get_template_directory_uri()?>/images/google-plus-g-brands.svg"  alt="Google Plus Icon" /> Google+</a></li>
-                <?php
-    }
-    if (!empty(get_theme_mod("color_wamp_social_linkedin"))) {
+    if (!empty(get_theme_mod("color_wamp_social_linkedin", "#linked"))) {
         ?>
         <li><a href="<?php echo get_theme_mod("color_wamp_social_linkedin")?>" <?php echo get_theme_mod("color_wamp_social_linkedin_checkbox") ? "target='_blank'" : ""?>><img class="left mr-2" src="<?php echo get_template_directory_uri()?>/images/linkedin-in-brands.svg" alt="LinkedIn Icon"  /> LinkedIn</a></li>
         <?php
@@ -198,5 +194,10 @@ a {
         ?>
         <li><a href="<?php echo get_theme_mod("color_wamp_social_youtube")?>" <?php echo get_theme_mod("color_wamp_social_youtube_checkbox") ? "target='_blank'" : ""?>><img class="left mr-2" src="<?php echo get_template_directory_uri()?>/images/youtube-brands.svg" alt="Youtube Icon"/> Youtube</a></li>
         <?php
+    }
+    if (!empty(get_theme_mod("color_wamp_social_tumblr"))) {
+        ?>
+                    <li><a href="<?php echo get_theme_mod("color_wamp_social_tumblr")?>" <?php echo get_theme_mod("color_wamp_social_tumblr_checkbox") ? "target='_blank'" : ""?>><img class="left mr-2" src="<?php echo get_template_directory_uri()?>/images/tumblr-brands.svg"  alt="Tumblr Icon" /> Tumblr</a></li>
+                <?php
     } ?>
     </ul>
