@@ -3,6 +3,7 @@
     <?php
     $medium = 6;
     $mRowWrap = false;
+<<<<<<< HEAD
     $fm = 6;
     $fl = 6;
     if (is_active_sidebar("footer_01")) {
@@ -12,20 +13,41 @@
             $fl = 4;
             if (is_active_sidebar("footer_03")) {
                 $medium = 3;
+=======
+    $fm = 4;
+    $fl = 4;
+    if (is_active_sidebar("footer_01")) {
+        if (is_active_sidebar("footer_02")) {
+            $medium = 4;
+            $fm = 3;
+            $fl = 3;
+            if (is_active_sidebar("footer_03")) {
+                $medium = 4;
+>>>>>>> 994ce33b50badf6c4e929a1f9b394593f4839d86
                 $mRowWrap = true;
                 $fm = 4;
                 $fl = 4;
             }
         } elseif (is_active_sidebar("footer_03")) {
             $medium = 4;
+<<<<<<< HEAD
             $fm = 4;
             $fl = 4;
+=======
+            $fm = 3;
+            $fl = 3;
+>>>>>>> 994ce33b50badf6c4e929a1f9b394593f4839d86
         }
     } elseif (is_active_sidebar("footer_02")) {
         if (is_active_sidebar("footer_03")) {
             $medium = 4;
+<<<<<<< HEAD
             $fm = 4;
             $fl = 4;
+=======
+            $fm = 3;
+            $fl = 3;
+>>>>>>> 994ce33b50badf6c4e929a1f9b394593f4839d86
         }
     } ?>
     <div class="col s12 m<?php echo $medium ?> mb-2">
@@ -119,7 +141,11 @@
     </div>
     <?php if ($mRowWrap) {
         ?>
+<<<<<<< HEAD
       <div class="col s12 l9"><div class="row">
+=======
+      <div class="col s12 l6"><div class="row">
+>>>>>>> 994ce33b50badf6c4e929a1f9b394593f4839d86
     <?php
     } ?>
 
@@ -159,6 +185,7 @@
     } ?>
 
 
+<<<<<<< HEAD
     <!-- <div class="col s12 m<?php //echo $mRowWrap ? '12' : '2' ?> l2 right">
       <button class="btn btn-floating btn-large white waves-effect right"><i class="material-icons primary-text"
           onclick="scrollToTop(200,3)">arrow_upward</i></button>
@@ -171,6 +198,15 @@
           onclick="scrollToTop(200,3)">arrow_upward</i></button>
         </div>
 
+=======
+    <div class="col s12 m<?php echo $mRowWrap ? '12' : '2' ?> l2 right">
+      <button class="btn btn-floating btn-large white waves-effect right"><i class="material-icons primary-text"
+          onclick="scrollToTop(200,3)">arrow_upward</i></button>
+    </div>
+  </div>
+</section>
+
+>>>>>>> 994ce33b50badf6c4e929a1f9b394593f4839d86
 <footer class="text-primary-light primary m-0 py-2 px-4">
   <div class="left">
     <p class="my-1">
@@ -257,6 +293,7 @@
     }
   });
 
+<<<<<<< HEAD
   window.onscroll = function () {
     let elem = document.getElementById("scrollToTop").children[0];
     if(window.scrollY + window.innerHeight >
@@ -268,6 +305,8 @@
       elem.classList.add("scale-out");
     }
   };
+=======
+>>>>>>> 994ce33b50badf6c4e929a1f9b394593f4839d86
 
   function scrollToTop(totalTime, easingPower) {
     //console.log("here");

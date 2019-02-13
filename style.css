@@ -593,11 +593,14 @@ hr.thin {
     opacity: 1;
     display: block;
 }
+<<<<<<< HEAD
 #scrollToTop { 
     position: fixed; 
     bottom: 24px; 
     right: 24px;
 }
+=======
+>>>>>>> 994ce33b50badf6c4e929a1f9b394593f4839d86
 
 @media (orientation: landscape) {
     ::-webkit-scrollbar {

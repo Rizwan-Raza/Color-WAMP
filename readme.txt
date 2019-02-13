@@ -40,7 +40,10 @@ All available options can be used from Appearance->Customize
 * Footer Widgets added
 * Footer Navigation removed
 * Google Plus social link and icon is replaced with Tumblr
+<<<<<<< HEAD
 * Detached Scroll To Top Button
+=======
+>>>>>>> 994ce33b50badf6c4e929a1f9b394593f4839d86
 
 = Version 1.0.1 =
 * Minor Tweaks are done
