@@ -166,7 +166,7 @@
   </div>
 </section>
 
-<div id="scrollToTop" style="position: fixed; bottom: 24px; right: 24px;">
+<div id="scrollToTop">
   <button class="btn btn-floating btn-large white waves-effect right scale-transition scale-out"><i class="material-icons primary-text"
           onclick="scrollToTop(200,3)">arrow_upward</i></button>
         </div>
