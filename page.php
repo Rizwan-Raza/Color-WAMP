@@ -15,7 +15,7 @@
         <?php
         if (have_posts()) {
             ?>
-            <?php if ((!is_front_page() and !is_home()) or get_theme_mod("color_wamp_design_breadcrumb_page_setting", 1)) {
+            <?php if ((!is_front_page() and !is_home()) and get_theme_mod("color_wamp_design_breadcrumb_page_setting", 1)) {
                 ?> 
                 
         <nav class="white px-4 my-4">
