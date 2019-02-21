@@ -15,7 +15,7 @@
         <?php
         if (have_posts()) {
             ?>
-        <?php if (get_theme_mod("color_wamp_design_breadcrumb_post_setting", 1)) {
+        <?php if ((!is_front_page() and !is_home()) and get_theme_mod("color_wamp_design_breadcrumb_post_setting", 1)) {
                 ?> 
                 <nav class="white px-4 my-4">
             <a href="<?php echo get_home_url()?>" class="breadcrumb grey-text primary-text-hover">Home</a>

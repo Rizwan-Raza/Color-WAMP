@@ -41,6 +41,7 @@ All available options can be used from Appearance->Customize
 * Footer Navigation removed
 * Google Plus social link and icon is replaced with Tumblr
 * Detached Scroll To Top Button
+* Page View optimized
 
 = Version 1.0.1 =
 * Minor Tweaks are done
