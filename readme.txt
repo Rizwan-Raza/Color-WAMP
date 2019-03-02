@@ -41,7 +41,8 @@ All available options can be used from Appearance->Customize
 * Footer Navigation removed
 * Google Plus social link and icon is replaced with Tumblr
 * Detached Scroll To Top Button
-* Page View optimized
+* Page View optimized, pararaph spacing and list bullets
+* Page Title wp_title filter
 
 = Version 1.0.1 =
 * Minor Tweaks are done

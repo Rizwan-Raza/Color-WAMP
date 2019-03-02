@@ -541,6 +541,20 @@ hr.thin {
     object-position: center;
 }
 
+.card .card-content .post-content p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card .card-content .post-content ul {
+    padding-left: 40px;
+    list-style-type: initial;
+}
+
+.card .card-content .post-content ul li {
+    list-style-type: initial;
+}
+
 .force-a-white a {
     color: #ffffff !important;
     -webkit-text-shadow: 0 2px 2px rgba(0, 0, 0, 0.14),
@@ -593,9 +607,10 @@ hr.thin {
     opacity: 1;
     display: block;
 }
-#scrollToTop { 
-    position: fixed; 
-    bottom: 24px; 
+
+#scrollToTop {
+    position: fixed;
+    bottom: 24px;
     right: 24px;
 }
 
