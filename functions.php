@@ -963,7 +963,7 @@ function wpdocs_theme_name_wp_title( $title, $sep ) {
  
     // Add a page number if necessary:
     if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-        $title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+        $title .= " $sep " . sprintf( __( 'Page %s', 'color-wamp' ), max( $paged, $page ) );
     }
     return $title;
 }
