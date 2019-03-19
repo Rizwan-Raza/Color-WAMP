@@ -8,21 +8,17 @@ Color WAMP is reponsive magazine style theme for 2019.
 * Donate link: [https://www.wampinfotech.com/pay](https://www.wampinfotech.com/pay)
 
 
-/**********************************************************/
-
 ## Frequently Asked Questions 
 
-= Does this plugin work with newest WP version and also older versions? =
+### Does this plugin work with newest WP version and also older versions?
 Yes, this plugin works really fine with WordPress 5.1!
 It also works great with WP 5.0 - and also should with WP 3.1 - but we only tested extensively with WP 5.1 and 5.1.1 So you always should run the latest WordPress version for a lot of reasons.
 
-/**********************************************************/
+
 
 ## Screenshots 
 
 * Color WAMP Homepage with default banner and dummy post (running with WordPress 5.0 here)
-
-/**********************************************************/
 
 ## COPYRIGHT AND LICENSE
 
@@ -35,12 +31,9 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 Color WAMP WordPress Theme, Copyright 2019 WAMP Infotech
 Color WAMP is distributed under the terms of the GNU GPL
 
-/**********************************************************/
 
 ## Upgrade Notice
-
-/**********************************************************/
-
+### Nothing to say right now
 ## THEME USAGE 
 
 ### Free Support
@@ -49,7 +42,6 @@ Get free support at [WAMP Contact](https://www.wampinfotech.com/contact)
 ### Theme Features Usage
 All available options can be used from Appearance->Customize
 
-/**********************************************************/
 
 ## Changelog
 
