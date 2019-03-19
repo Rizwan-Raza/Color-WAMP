@@ -2,7 +2,7 @@
 <section class="pin-top">
 <?php if (get_theme_mod("color_wamp_page_header_top_option") == "image") {
     ?>
-<img src="<?php echo get_theme_mod("color_wamp_page_header_top_image")?>" alt="WAMP Header Banner" class="banner-image w-full"/>
+<img src="<?php echo get_theme_mod("color_wamp_page_header_top_image")?>" alt=<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="banner-image w-full"/>
 <br />
 <?php
 } elseif (get_theme_mod("color_wamp_page_header_top_option", "panel") == "panel") {
@@ -21,15 +21,15 @@
             <p class="grey-text">
             <?php
             if (is_author()) {
-                echo "Author: <strong>".ucfirst(get_the_author())."</strong>";
+                echo __("Author", "color-wamp").": <strong>".ucfirst(get_the_author())."</strong>";
             } elseif (is_category()) {
-                echo "Category: <strong>".single_cat_title('', false) ."</strong>";
+                echo __("Category", "color-wamp").": <strong>".single_cat_title('', false) ."</strong>";
             } elseif (is_day()) {
-                echo "Day: <strong>".get_the_time("jS F, Y")."</strong>";
+                echo __("Day", "color-wamp").": <strong>".get_the_time("jS F, Y")."</strong>";
             } elseif (is_month()) {
-                echo "Month: <strong>".single_month_title(' ', false)."</strong>";
+                echo __("Month", "color-wamp").": <strong>".single_month_title(' ', false)."</strong>";
             } elseif (is_year()) {
-                echo "Year: <strong>".get_the_time("Y")."</strong>";
+                echo __("Year", "color-wamp").": <strong>".get_the_time("Y")."</strong>";
             } ?>
             </strong></p>
         </nav>

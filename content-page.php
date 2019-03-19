@@ -30,7 +30,7 @@
             <?php the_excerpt()?>
         </div>
         <div class="card-action">
-            <a class="fw-500 m-0 primary-text right" href="<?php echo get_the_permalink()?>">Read more</a>
+            <a class="fw-500 m-0 primary-text right" href="<?php echo get_the_permalink()?>"><?php _e('Read more', 'color-wamp')?></a>
             <div class="clearfix"></div>
         </div>
     </div>

@@ -132,7 +132,7 @@
     <?php
     } else {
         ?>
-      <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>">Add some widgets from Admin Panel</div>
+      <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>"><?php _e('Add some widgets from Admin Panel', 'color-wamp')?></div>
       <?php
     }?>
     <?php if (is_active_sidebar("footer_02")) {

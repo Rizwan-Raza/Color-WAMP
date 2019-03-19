@@ -127,7 +127,7 @@ a {
         <ul class="tabs tabs-transparent fw-500">
             <?php if (get_theme_mod('color_wamp_home_menu_header_setting', 1)) {
         ?>
-                <li class="tab scale-transition menu-item"><a href="<?php echo get_home_url()?>">Home</a></li>
+                <li class="tab scale-transition menu-item"><a href="<?php echo get_home_url()?>"><?php _e("Home", "color-wamp")?></a></li>
                 <?php
     } ?>
             <?php if (has_nav_menu("main-header-menu")) {
@@ -140,14 +140,14 @@ a {
     }
                 ?>
                 <?php if (get_theme_mod('color_wamp_home_search_header_setting', 1)) {
-                    ?> <li class="tab right search"><form action="<?php echo esc_url(home_url('/'))?>" class="search-form clearfix" method="get"><div class="input-field my-1"><input name="s" id="search-top" type="search" class="right" placeholder="Enter query and press 'enter'"/></div></form><button class="right btn-floating btn-flat white-text transparent waves-circle waves-effect waves-light" tabindex="-1" onclick="toggleSearch(this)"><i class="material-icons">search</i></button></li>
+                    ?> <li class="tab right search"><form action="<?php echo esc_url(home_url('/'))?>" class="search-form clearfix" method="get"><div class="input-field my-1"><input name="s" id="search-top" type="search" class="right" placeholder="<?php _e('Enter query and press `enter`', 'color-wamp')?>"/></div></form><button class="right btn-floating btn-flat white-text transparent waves-circle waves-effect waves-light" tabindex="-1" onclick="toggleSearch(this)"><i class="material-icons">search</i></button></li>
                 <?php
                 } ?>
             </ul>
     </div>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="<?php echo get_home_url()?>">Home</a></li>
+        <li><a href="<?php echo get_home_url()?>"><?php _e("Home", "color-wamp")?></a></li>
         <?php
         wp_nav_menu(array(
             'theme_location' => 'main-sidebar-menu',

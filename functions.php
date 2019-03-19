@@ -18,8 +18,8 @@
     {
         register_nav_menus(
             array(
-                'main-header-menu' => 'Main Header Menu',
-                'main-sidebar-menu' => 'Main Mobile Sidebar Menu'
+                'main-header-menu' => __('Main Header Menu', 'color-wamp'),
+                'main-sidebar-menu' => __('Main Mobile Sidebar Menu', 'color-wamp')
             )
         );
     }
@@ -135,7 +135,7 @@
         register_sidebar(array(
             "name"=>__("Home Right Sidebar", "color-wamp"),
             "id"=>"home-right-sidebar",
-            "description" => "Widgets in this area will be shown on all posts",
+            "description" => __("Widgets in this area will be shown on all posts", "color-wamp"),
             "before_widget"=>"<aside class='card-panel my-4'>",
             "after_widget"=>"</aside>",
             "before_title"=>"<h4>",
@@ -190,8 +190,8 @@
     {
         $wp_customize->add_section('color_wamp_social_links_option', array(
             'priority'    => 170,
-            "title" => "Social Options",
-            'description' => 'Change the Social Links settings from here as you want, if you want to remove any social link just leave it empty or make it empty',
+            "title" => __("Social Options", "color-wamp"),
+            'description' => __("Change the Social Links settings from here as you want, if you want to remove any social link just leave it empty or make it empty", "color-wamp"),
         ));
 
         $wp_customize->add_setting('color_wamp_social_link_activate_settings', array(
@@ -202,7 +202,7 @@
 
         $wp_customize->add_control('color_wamp_social_link_activate', array(
         'type'     => 'checkbox',
-        'label'    => 'Check to activate social links area',
+        'label'    => __("Check to activate social links area", "color-wamp"),
         'section'  => 'color_wamp_social_links_option',
         'settings' => 'color_wamp_social_link_activate_settings',
     ));
@@ -216,13 +216,13 @@
 
         $wp_customize->add_control('color_wamp_social_link_location_option', array(
         'type'     => 'radio',
-        'label'    => 'Social links to display on:',
+        'label'    => __("Social links to display on:", "color-wamp"),
         'section'  => 'color_wamp_social_links_option',
         'settings' => 'color_wamp_social_link_location_option',
         'choices'  => array(
-            'header' => 'Header only',
-            'footer' => 'Footer only',
-            'both'   => 'Both header and footer',
+            'header' => __('Header only', 'color-wamp'),
+            'footer' => __('Footer only', 'color-wamp'),
+            'both'   => __('Both header and footer', 'color-wamp'),
         ),
     ));
 
@@ -296,7 +296,7 @@
 
             $wp_customize->add_control($color_wamp_social_link['id'] . '_checkbox', array(
             'type'     => 'checkbox',
-            'label'    => 'Check to open in new tab',
+            'label'    => __('Check to open in new tab', 'color-wamp'),
             'section'  => 'color_wamp_social_links_option',
             'settings' => $color_wamp_social_link['id'] . '_checkbox',
             'priority' => $i,
@@ -309,15 +309,15 @@
         // Header Options Panel
         $wp_customize->add_panel("color_wamp_header_options", array(
             "proiority"=>101,
-            "title"=>"Header Options",
-            "description"=> "Change header display options"
+            "title"=>__("Header Options", "color-wamp"),
+            "description"=> __("Change header display options", "color-wamp")
         ));
 
         // Static Home Menu
         $wp_customize->add_section("color_wamp_home_menu_header_options", array(
             "priority"=> 1,
-            "title"=> "Show Home Menu",
-            "description"=> "Add or remove home menu",
+            "title"=> __("Show Home Menu", "color-wamp"),
+            "description"=> __("Add or remove home menu", "color-wamp"),
             "panel" => "color_wamp_header_options"
         ));
         $wp_customize->add_setting("color_wamp_home_menu_header_setting", array(
@@ -328,14 +328,14 @@
 
         $wp_customize->add_control('color_wamp_home_menu_header_setting', array(
             'type'     => 'checkbox',
-            'label'    => 'Check to activate home links in the primary menu',
+            'label'    => __("Check to activate home links in the primary menu", "color-wamp"),
             'section'  => 'color_wamp_home_menu_header_options',
             'settings' => 'color_wamp_home_menu_header_setting',
         ));
         $wp_customize->add_section("color_wamp_home_search_header_options", array(
             "priority"=> 1,
-            "title"=> "Search Icon",
-            "description"=> "Check to display the Search Icon in the primary menu",
+            "title"=> __("Search Icon", "color-wamp"),
+            "description"=> __("Check to display the Search Icon in the primary menu", "color-wamp"),
             "panel" => "color_wamp_header_options"
         ));
         $wp_customize->add_setting("color_wamp_home_search_header_setting", array(
@@ -346,15 +346,15 @@
 
         $wp_customize->add_control('color_wamp_home_search_header_setting', array(
             'type'     => 'checkbox',
-            'label'    => 'Check to display the Search Icon in the primary menu',
+            'label'    => __("Check to display the Search Icon in the primary menu", "color-wamp"),
             'section'  => 'color_wamp_home_search_header_options',
             'settings' => 'color_wamp_home_search_header_setting',
         ));
 
         $wp_customize->add_section("color_wamp_sticky_header_options", array(
             "priority"=> 1,
-            "title"=> "Sticky Menu",
-            "description"=> "Check to enable the sticky behavior of the primary menu",
+            "title"=> __("Sticky Menu", "color-wamp"),
+            "description"=> __("Check to enable the sticky behavior of the primary menu", "color-wamp"),
             "panel" => "color_wamp_header_options"
         ));
         $wp_customize->add_setting("color_wamp_sticky_header_setting", array(
@@ -365,7 +365,7 @@
 
         $wp_customize->add_control('color_wamp_sticky_header_setting', array(
             'type'     => 'checkbox',
-            'label'    => 'Check to enable the sticky behavior of the primary menu',
+            'label'    => __("Check to enable the sticky behavior of the primary menu'", "color-wamp"),
             'section'  => 'color_wamp_sticky_header_options',
             'settings' => 'color_wamp_sticky_header_setting',
         ));
@@ -374,16 +374,16 @@
         // Home Header
         $wp_customize->add_section("color_wamp_home_header_options", array(
             "priority"=> 3,
-            "title"=> "Home Header",
-            "description"=> "Change home header display options",
+            "title"=> __("Home Header", "color-wamp"),
+            "description"=> __("Change home header display options", "color-wamp"),
             "panel" => "color_wamp_header_options"
         ));
 
         // Page Header
         $wp_customize->add_section("color_wamp_page_header_options", array(
             "priority"=> 4,
-            "title"=> "Single Page Header",
-            "description"=> "Change single page and archives header display options",
+            "title"=> __("Single Page Header", "color-wamp"),
+            "description"=> __("Change single page and archives header display options", "color-wamp"),
             "panel" => "color_wamp_header_options"
         ));
 
@@ -397,13 +397,13 @@
         // control
         $wp_customize->add_control('color_wamp_home_header_top_option', array(
             'type'     => 'radio',
-            "label"=> "Home Header Top",
+            "label"=> __("Home Header Top", "color-wamp"),
             "section" => "color_wamp_home_header_options",
             'settings' => 'color_wamp_home_header_top_option',
             'choices'  => array(
-                'image' => 'Banner Image',
-                'panel' => 'Back Panel',
-                'none'   => 'None',
+                'image' => __("Banner Image", "color-wamp"),
+                'panel' => __("Back Panel", "color-wamp"),
+                'none'   => __("None", "color-wamp"),
             ),
         ));
 
@@ -415,7 +415,7 @@
         ));
         // control
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'color_wamp_home_header_top_image', array(
-            "label"=> "Choose Header Image",
+            "label"=> __("Choose Header Image", "color-wamp"),
             "section" => "color_wamp_home_header_options",
             'settings' => 'color_wamp_home_header_top_image',
             
@@ -431,13 +431,13 @@
         // control
         $wp_customize->add_control('color_wamp_page_header_top_option', array(
             'type'     => 'radio',
-            "label"=> "Page Header Top",
+            "label"=> __("Page Header Top", "color-wamp"),
             "section" => "color_wamp_page_header_options",
             'settings' => 'color_wamp_page_header_top_option',
             'choices'  => array(
-                'image' => 'Banner Image',
-                'panel' => 'Back Panel',
-                'none'   => 'None',
+                'image' => __("Banner Image", "color-wamp"),
+                'panel' => __("Back Panel", "color-wamp"),
+                'none'   => __("None", "color-wamp"),
             ),
         ));
 
@@ -449,7 +449,7 @@
         ));
         // control
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'color_wamp_page_header_top_image', array(
-            "label"=> "Choose Header Image",
+            "label"=> __("Choose Header Image", "color-wamp"),
             "section" => "color_wamp_page_header_options",
             'settings' => 'color_wamp_page_header_top_image',
             
@@ -459,7 +459,7 @@
         // Design Options Panel
         $wp_customize->add_panel("color_wamp_design_options", array(
                     "proiority"=>102,
-                    "title"=>"Design Options",
+                    "title"=>__("Design Options", "color-wamp"),
                     "description"=> "Change designs display options"
                 ));
         
@@ -472,7 +472,7 @@
         ));
      
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'color_wamp_theme_color_options', array(
-            'label'    => 'Theme Color',
+            'label'    => __("Theme Color", "color-wamp"),
             'section'  => 'colors',
             'settings' => 'color_wamp_theme_color_setting',
         )));
@@ -480,7 +480,7 @@
         // Breadcrumbs
         $wp_customize->add_section("color_wamp_design_breadcrumb_options", array(
                     "priority"=> 2,
-                    "title"=> "Breadcrumbs",
+                    "title"=> __("Breadcrumbs", "color-wamp"),
                     "description"=> "Add or remove breadcrumbs",
                     "panel" => "color_wamp_design_options"
                 ));
@@ -493,7 +493,7 @@
         
         $wp_customize->add_control('color_wamp_design_breadcrumb_post_setting', array(
                     'type'     => 'checkbox',
-                    'label'    => 'Check to activate breadcrumb in single posts only',
+                    'label'    => __("Check to activate breadcrumb in single posts only", "color-wamp"),
                     'section'  => 'color_wamp_design_breadcrumb_options',
                     'settings' => 'color_wamp_design_breadcrumb_post_setting',
                 ));
@@ -507,7 +507,7 @@
         
         $wp_customize->add_control('color_wamp_design_breadcrumb_page_setting', array(
                     'type'     => 'checkbox',
-                    'label'    => 'Check to activate breadcrumb in pages only',
+                    'label'    => __("Check to activate breadcrumb in pages only", "color-wamp"),
                     'section'  => 'color_wamp_design_breadcrumb_options',
                     'settings' => 'color_wamp_design_breadcrumb_page_setting',
                 ));
@@ -515,8 +515,8 @@
         // Archives and Search Headers
         $wp_customize->add_section("color_wamp_design_top_header_options", array(
                     "priority"=> 3,
-                    "title"=> "Archives and Search Headers",
-                    "description"=> "Add or remove headers in archive and search result pages",
+                    "title"=> __("Archives and Search Headers", "color-wamp"),
+                    "description"=> __("Add or remove headers in archive and search result pages", "color-wamp"),
                     "panel" => "color_wamp_design_options"
                 ));
         // archive
@@ -528,7 +528,7 @@
         
         $wp_customize->add_control('color_wamp_design_header_archive_setting', array(
                     'type'     => 'checkbox',
-                    'label'    => 'Check to activate top header in archive pages only',
+                    'label'    => __("Check to activate top header in archive pages only", "color-wamp"),
                     'section'  => 'color_wamp_design_top_header_options',
                     'settings' => 'color_wamp_design_header_archive_setting',
                 ));
@@ -542,7 +542,7 @@
         
         $wp_customize->add_control('color_wamp_design_header_search_setting', array(
                     'type'     => 'checkbox',
-                    'label'    => 'Check to activate top header of query in search result pages only',
+                    'label'    => __("Check to activate top header of query in search result pages only", "color-wamp"),
                     'section'  => 'color_wamp_design_top_header_options',
                     'settings' => 'color_wamp_design_header_search_setting',
                 ));
@@ -577,15 +577,15 @@
         // Start of the Additional Options
         $wp_customize->add_panel('color_wamp_additional_options', array(
         'capability'  => 'edit_theme_options',
-        'description' => 'Change the Additional Settings from here as you want',
+        'description' => __("Change the Additional Settings from here as you want", "color-wamp"),
         'priority'    => 171,
-        'title'       => 'Additional Options',
+        'title'       => __("Additional Options", "color-wamp"),
     ));
 
         // related posts
         $wp_customize->add_section('color_wamp_related_posts_section', array(
         'priority' => 1,
-        'title'    => 'Related Posts',
+        'title'    => __("Related Posts", "color-wamp"),
         'panel'    => 'color_wamp_additional_options',
     ));
 
@@ -597,7 +597,7 @@
 
         $wp_customize->add_control('color_wamp_related_posts_activate', array(
         'type'     => 'checkbox',
-        'label'    => 'Check to activate the related posts',
+        'label'    => __("Check to activate the related posts", "color-wamp"),
         'section'  => 'color_wamp_related_posts_section',
         'settings' => 'color_wamp_related_posts_activate',
     ));
@@ -610,19 +610,19 @@
 
         $wp_customize->add_control('color_wamp_related_posts', array(
         'type'     => 'radio',
-        'label'    => 'Related Posts Must Be Shown As:',
+        'label'    => __("Related Posts Must Be Shown As:", "color-wamp"),
         'section'  => 'color_wamp_related_posts_section',
         'settings' => 'color_wamp_related_posts',
         'choices'  => array(
-            'categories' => 'Related Posts By Categories',
-            'tags'       => 'Related Posts By Tags',
+            'categories' => __("Related Posts By Categories", "color-wamp"),
+            'tags'       => __("Related Posts By Tags", "color-wamp"),
         ),
     ));
 
         // featured image popup check
         $wp_customize->add_section('color_wamp_featured_image_popup_setting', array(
         'priority' => 6,
-        'title'    => 'Image Lightbox',
+        'title'    => __("Image Lightbox", "color-wamp"),
         'panel'    => 'color_wamp_additional_options',
     ));
 
@@ -634,7 +634,7 @@
 
         $wp_customize->add_control('color_wamp_featured_image_popup', array(
         'type'     => 'checkbox',
-        'label'    => 'Check to enable the lightbox for the featured images in single post',
+        'label'    => __("Check to enable the lightbox for the featured images in single post", "color-wamp"),
         'section'  => 'color_wamp_featured_image_popup_setting',
         'settings' => 'color_wamp_featured_image_popup',
     ));
@@ -642,7 +642,7 @@
         // Feature Image dispaly/hide option
         $wp_customize->add_section('color_wamp_featured_image_show_setting', array(
         'priority' => 6,
-        'title'    => 'Featured Image',
+        'title'    => __("Featured Image", "color-wamp"),
         'panel'    => 'color_wamp_additional_options',
     ));
 
@@ -654,7 +654,7 @@
 
         $wp_customize->add_control('color_wamp_featured_image_show', array(
         'type'     => 'checkbox',
-        'label'    => 'Check to show the featured image in single post page.',
+        'label'    => __("Check to show the featured image in single post page.", "color-wamp"),
         'section'  => 'color_wamp_featured_image_show_setting',
         'settings' => 'color_wamp_featured_image_show',
     ));
@@ -662,7 +662,7 @@
         // Feature Image dispaly option in single page
         $wp_customize->add_section('color_wamp_featured_image_show_setting_single_page', array(
             'priority' => 6,
-            'title'    => 'Featured Image In Single Page',
+            'title'    => __("Featured Image In Single Page", "color-wamp"),
             'panel'    => 'color_wamp_additional_options',
         ));
     
@@ -674,7 +674,7 @@
     
         $wp_customize->add_control('color_wamp_featured_image_single_page_show', array(
             'type'     => 'checkbox',
-            'label'    => 'Check to display the featured image in single page.',
+            'label'    => __("Check to display the featured image in single page.", "color-wamp"),
             'section'  => 'color_wamp_featured_image_show_setting_single_page',
             'settings' => 'color_wamp_featured_image_single_page_show',
         ));
@@ -682,7 +682,7 @@
         // Back and forth navigational links
         $wp_customize->add_section('color_wamp_bf_nav_links_options', array(
             'priority' => 7,
-            'title'    => 'Article Navigational Links',
+            'title'    => __("Article Navigational Links", "color-wamp"),
             'panel'    => 'color_wamp_additional_options',
         ));
     
@@ -694,7 +694,7 @@
     
         $wp_customize->add_control('color_wamp_bf_nav_links_settings', array(
             'type'     => 'checkbox',
-            'label'    => 'Check to display the article navigational links.',
+            'label'    => __("Check to display the article navigational links.", "color-wamp"),
             'section'  => 'color_wamp_bf_nav_links_options',
             'settings' => 'color_wamp_bf_nav_links_settings',
         ));
@@ -703,15 +703,15 @@
         // Start of the Footer Options
         $wp_customize->add_panel('color_wamp_footer_options', array(
         'capability'  => 'edit_theme_options',
-        'description' => 'Change the Footer Settings from here as you want',
+        'description' => __("Change the Footer Settings from here as you want", "color-wamp"),
         'priority'    => 172,
-        'title'       => 'Footer Options',
+        'title'       => __("Footer Options", "color-wamp"),
     ));
 
         // Footer Copyright
         $wp_customize->add_section('color_wamp_footer_copyright_text_section', array(
         'priority' => 1,
-        'title'    => 'Copyright',
+        'title'    => __("Copyright", "color-wamp"),
         'panel'    => 'color_wamp_footer_options',
     ));
 
@@ -723,7 +723,7 @@
 
         $wp_customize->add_control('color_wamp_footer_copyright_activate', array(
         'type'     => 'checkbox',
-        'label'    => 'Check to activate the footer copyright text',
+        'label'    => __("Check to activate the footer copyright text", "color-wamp"),
         'section'  => 'color_wamp_footer_copyright_text_section',
         'settings' => 'color_wamp_footer_copyright_activate',
     ));
@@ -736,7 +736,7 @@
 
         $wp_customize->add_control('color_wamp_footer_copyright_text', array(
         'type'     => 'text',
-        'label'    => 'Footer copyright text',
+        'label'    => __("Footer copyright text", "color-wamp"),
         'section'  => 'color_wamp_footer_copyright_text_section',
         'settings' => 'color_wamp_footer_copyright_text',
     ));
@@ -756,7 +756,7 @@
 
         $wp_customize->add_control('color_wamp_footer_rights_activate', array(
         'type'     => 'checkbox',
-        'label'    => 'Check to activate the footer rights text',
+        'label'    => __("Check to activate the footer rights text", "color-wamp"),
         'section'  => 'color_wamp_footer_rights_text_section',
         'settings' => 'color_wamp_footer_rights_activate',
     ));
@@ -769,7 +769,7 @@
 
         $wp_customize->add_control('color_wamp_footer_rights_text', array(
         'type'     => 'text',
-        'label'    => 'Footer rights text',
+        'label'    => __("Footer rights text", "color-wamp"),
         'section'  => 'color_wamp_footer_rights_text_section',
         'settings' => 'color_wamp_footer_rights_text',
     ));
@@ -789,7 +789,7 @@
 
         $wp_customize->add_control('color_wamp_footer_wordpress_activate', array(
         'type'     => 'checkbox',
-        'label'    => 'Check to activate the footer copyright text',
+        'label'    => __("Check to activate the footer copyright text", "color-wamp"),
         'section'  => 'color_wamp_footer_wordpress_section',
         'settings' => 'color_wamp_footer_wordpress_activate',
     ));
@@ -802,7 +802,7 @@ add_action("customize_register", "color_wamp_customizer_panel");
 add_filter('genesis_title_comments', 'child_title_comments');
 function child_title_comments()
 {
-    return comments_number('<h3>No Responses</h3>', '<h3>1 Response</h3>', '<h3>% Responses...</h3>');
+    return '<h3>'.comments_number(__('No Responses', 'color-wamp'), __('1 Response', 'color-wamp'), __('% Responses...', 'color-wamp')).'</h3>';
 }
  
 // Unset URL from comment form

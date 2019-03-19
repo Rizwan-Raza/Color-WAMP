@@ -1,7 +1,7 @@
 <?php $related_posts = color_wamp_related_posts_function(); ?>
 <?php if ($related_posts->have_posts()): ?>
 
-<h4>You May Also Like</h4>
+<h4><?php _e("You May Also Like", "color-wamp")?></h4>
 
 <div class="row clearfix">
    <?php while ($related_posts->have_posts()) : $related_posts->the_post(); ?>

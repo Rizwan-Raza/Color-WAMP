@@ -7,9 +7,9 @@
                 ?>
 				<div class="card-panel my-4">
 					<header class="page-header">
-						<h1 class="page-title">Oops! That page can&rsquo;t be found.</h1>
+						<h1 class="page-title"><?php _e('Oops! That page can&rsquo;t be found.', 'color-wamp')?></h1>
 					</header>
-					<p>It looks like nothing was found at this location. Try the search below.</p>
+					<p><?php _e('It looks like nothing was found at this location. Try the search below.', 'color-wamp')?></p>
 					<br />
 					<?php get_search_form(); ?>
 				</div>

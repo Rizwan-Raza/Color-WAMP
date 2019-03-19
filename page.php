@@ -2,7 +2,7 @@
 <section class="pin-top">
 <?php if (get_theme_mod("color_wamp_page_header_top_option") == "image") {
     ?>
-<img src="<?php echo get_theme_mod("color_wamp_page_header_top_image")?>" alt="WAMP Header Banner" class="banner-image w-full" />
+<img src="<?php echo get_theme_mod("color_wamp_page_header_top_image")?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="banner-image w-full" />
 <br />
 <?php
 } elseif (get_theme_mod("color_wamp_page_header_top_option", "panel") == "panel") {

@@ -11,11 +11,11 @@ if (post_password_required()) {
 	<?php if (have_comments()) : ?>
 		<br />
 		<hr class="thin grey lighten-1 my-2" />
-		<h3 class="comments-title"><i class="material-icons mr-2">comment</i>Comments		</h3>
+		<h3 class="comments-title"><i class="material-icons mr-2">comment</i><?php _e('Comments', 'color-wamp')?>	</h3>
 
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // are there comments to navigate through?>
 		<nav id="comment-nav-above" class="comment-navigation clearfix" role="navigation">
-			<h3 class="screen-reader-text">Comment navigation</h3>
+			<h3 class="screen-reader-text"><?php _e('Comment navigation', 'color-wamp')?></h3>
 			<div class="nav-previous"><?php previous_comments_link('<i class="material-icons>arrow_back</i> Older Comments'); ?></div>
 			<div class="nav-next"><?php next_comments_link('Newer Comments <i class="material-icons>arrow_forward</i>'); ?></div>
 		</nav><!-- #comment-nav-above -->
@@ -33,7 +33,7 @@ if (post_password_required()) {
 
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // are there comments to navigate through?>
 		<nav id="comment-nav-below" class="comment-navigation clearfix" role="navigation">
-			<h3 class="screen-reader-text">Comment navigation</h3>
+			<h3 class="screen-reader-text"><?php _e('Comment navigation', 'color-wamp')?></h3>
 			<div class="nav-previous"><?php previous_comments_link('<i class="material-icons>arrow_back</i> Older Comments'); ?></div>
 			<div class="nav-next"><?php next_comments_link('Newer Comments <i class="material-icons>arrow_forward</i>'); ?></div>
 		</nav><!-- #comment-nav-below -->
@@ -45,7 +45,7 @@ if (post_password_required()) {
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if (! comments_open() && '0' != get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
     ?>
-		<p class="no-comments">Comments are closed.</p>
+		<p class="no-comments"><?php _e('Comments are closed.', 'color-wamp')?></p>
 	<?php endif; ?>
 	<?php comment_form(); ?>
 

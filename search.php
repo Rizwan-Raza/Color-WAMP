@@ -2,7 +2,7 @@
 <section class="pin-top">
 <?php if (get_theme_mod("color_wamp_page_header_top_option") == "image") {
     ?>
-<img src="<?php echo get_theme_mod("color_wamp_page_header_top_image")?>" alt="WAMP Header Banner" class="banner-image w-full"/>
+<img src="<?php echo get_theme_mod("color_wamp_page_header_top_image")?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="banner-image w-full"/>
 <br />
 <?php
 } elseif (get_theme_mod("color_wamp_page_header_top_option", "panel") == "panel") {
@@ -18,7 +18,7 @@
          <?php if (get_theme_mod("color_wamp_design_header_search_setting", 1)) {
                 ?> 
          <nav class="white px-4 my-4">
-            <p class="grey-text">Searched for: <strong><?php echo get_search_query()?></strong></p>
+            <p class="grey-text"><?php _e("Searched for", "color-wamp")?>: <strong><?php echo get_search_query()?></strong></p>
          </nav>
          <?php
             } ?>
