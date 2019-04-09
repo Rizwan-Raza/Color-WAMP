@@ -1,5 +1,4 @@
-
-        <?php while (have_posts()) {
+<?php while (have_posts()) {
     the_post(); ?>
         <div id="post-<?php the_ID(); ?>" <?php post_class("card my-4"); ?>>
             
@@ -13,7 +12,7 @@
             <?php
     } ?>
           <span class="card-title"><h1 class="my-2">
-                <?php echo get_the_title()?>
+                <?php the_title()?>
             </h1>
             <hr class="short-border primary" />
             </span>
@@ -22,12 +21,12 @@
             <div class="card-content"> <?php
     } else {
         echo "<br /> ";
-    } ?><time class="grey-text left mr-2"><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo get_the_time("D, j M Y \a\\t h:i A")?>"><i class="material-icons left mr-1">access_time</i> <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'?></a></time>
-    <span class="left mr-2"><a href="<?php the_author_link()?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">person</i> <?php echo ucfirst(get_the_author())?></a></span>
-    <span class="left mr-2"><a href="<?php echo get_comments_link()?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">forum</i> <?php comments_number()?> </a></span>
+    } ?><time class="grey-text left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr(get_the_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">access_time</i> <?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
+    <span class="left mr-2"><a href="<?php the_author_link()?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">person</i> <?php echo esc_html(ucfirst(get_the_author()))?></a></span>
+    <span class="left mr-2"><a href="<?php echo esc_attr(get_comments_link())?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">forum</i> <?php comments_number()?> </a></span>
     <?php foreach (get_the_category() as $item) {
         ?>
-    <a href="<?php echo get_category_link($item->term_id)?>"><span class="chip white-text right" style="background-color: <?php echo get_theme_mod('color_wamp_category_color_' . $item->term_id, get_theme_mod("color_wamp_theme_color_setting", "#3d85c6"))?>" data-badge-caption=""><?php echo $item->name?></span></a>
+    <a href="<?php echo esc_attr(get_category_link($item->term_id))?>"><span class="chip white-text right" style="background-color: <?php echo esc_attr(get_theme_mod('color_wamp_category_color_' . $item->term_id, get_theme_mod("color_wamp_theme_color_setting", "#3d85c6")))?>" data-badge-caption=""><?php echo esc_html($item->name)?></span></a>
     <?php
     } ?>
     <div class="clearfix"></div>
@@ -45,7 +44,7 @@
   
     $tags_list = get_the_tag_list('<div class="tag-links my-2"><i class="material-icons left">local_offer</i>', ', ', '</div>');
     if ($tags_list) {
-        echo $tags_list;
+        echo esc_html($tags_list);
     }
     // If comments are open or we have at least one comment, load up the comment template
     if (comments_open() || '0' != get_comments_number()) {

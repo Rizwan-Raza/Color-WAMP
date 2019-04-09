@@ -1,7 +1,7 @@
 <?php $related_posts = color_wamp_related_posts_function(); ?>
 <?php if ($related_posts->have_posts()): ?>
 
-<h4><?php _e("You May Also Like", "color-wamp")?></h4>
+<h4><?php esc_html_e("You May Also Like", "color-wamp")?></h4>
 
 <div class="row clearfix">
    <?php while ($related_posts->have_posts()) : $related_posts->the_post(); ?>
@@ -32,12 +32,12 @@
                    '<div class="posted-on"><a href="%1$s" data-tooltip="%2$s" rel="bookmark" class="tooltipped"><i class="material-icons left">access_time</i> %3$s ago</a></div>',
                   esc_url(get_permalink()),
                   esc_attr(get_the_time("D, j M Y \a\\t h:i A")),
-                  $time_string
+                  esc_html($time_string)
                ); ?>
                <div class="clearfix"><a class="tooltipped" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID')))?>"
-                        data-tooltip="Posted by <?php echo ucfirst(get_the_author())?>">
-                        <i class="material-icons left">person</i><?php echo ucfirst(esc_html(get_the_author()))?></a></div>
-               <div class="clearfix"><a href="<?php echo get_comments_link()?>"><i class="material-icons left">forum</i> <?php comments_number()?> </a></div>
+                        data-tooltip="Posted by <?php echo esc_attr(ucfirst(get_the_author()))?>">
+                        <i class="material-icons left">person</i><?php echo esc_html(ucfirst(esc_html(get_the_author())))?></a></div>
+               <div class="clearfix"><a href="<?php echo esc_url(get_comments_link())?>"><i class="material-icons left">forum</i> <?php comments_number()?> </a></div>
             </div>
          </div>
       </div>

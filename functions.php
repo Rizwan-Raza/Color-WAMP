@@ -774,10 +774,10 @@
         'settings' => 'color_wamp_footer_rights_text',
     ));
 
-        // Footer Wordpress
+        // Footer WordPress
         $wp_customize->add_section('color_wamp_footer_wordpress_section', array(
         'priority' => 1,
-        'title'    => 'Wordpress Link',
+        'title'    => 'WordPress Link',
         'panel'    => 'color_wamp_footer_options',
     ));
 
@@ -852,7 +852,7 @@ add_filter('comment_form_defaults', 'color_wamp_comment_form_defaults', 10, 1);
 
 function simple_callback($comment, $args, $depth)
 {
-    print '<li><div class="left mr-1">' .get_avatar($comment, $args['avatar_size']).'</div>' . '<div class="left"><h4 style="line-height: '.$args['avatar_size'].'px" class="m-0">'.get_comment_author_link() ."</h4>";
+    print '<li><div class="left mr-1">' .get_avatar($comment, $args['avatar_size']).'</div>' . '<div class="left"><h4 style="line-height: '.esc_html($args['avatar_size']).'px" class="m-0">'.get_comment_author_link() ."</h4>";
     comment_text();
     comment_reply_link(array_merge($args, array('depth' => $depth,'max_depth' => $args['max_depth'])));
     print '<br /><br /></div><div class="clearfix"></div></li>';
@@ -963,7 +963,7 @@ function wpdocs_theme_name_wp_title( $title, $sep ) {
  
     // Add a page number if necessary:
     if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-        $title .= " $sep " . sprintf( __( 'Page %s', 'color-wamp' ), max( $paged, $page ) );
+        $title .= " $sep " . esc_html(sprintf('Page %s', max( $paged, $page )));
     }
     return $title;
 }

@@ -1,9 +1,9 @@
 == COLOR WAMP  ==
 Color WAMP is reponsive magazine style theme for 2019.
-Requires at least: 3.0.1
-Tested up to: 5.1.1
-Requires PHP: 5.2.4
-Stable tag: 1.0.3
+Requires at least: 4.8
+Tested up to: 4.9.8
+Requires PHP: 5.5
+Stable tag: 1.1.0
 Contributors: none
 Donate link: https://www.wampinfotech.com/pay
 
@@ -14,7 +14,7 @@ Donate link: https://www.wampinfotech.com/pay
 
 = Does this plugin work with newest WP version and also older versions? =
 Yes, this plugin works really fine with WordPress 5.1!
-It also works great with WP 5.0 - and also should with WP 3.1 - but we only tested extensively with WP 5.1 and 5.1.1 So you always should run the latest WordPress version for a lot of reasons.
+It also works great with WP 5.0 - and also should with WP 4.8 - but we only tested extensively with WP 5.1 and 5.1.1 So you always should run the latest WordPress version for a lot of reasons.
 
 /**********************************************************/
 
@@ -52,6 +52,10 @@ All available options can be used from Appearance->Customize
 /**********************************************************/
 
 == Changelog ==
+= Version 1.2.0 = 
+* Escaping functions applied on all text
+* Text-Domain added
+* Deprecated methods removed
 
 = Version 1.1.0 = 
 * Optional Theme URI removed

@@ -2,7 +2,7 @@
 <section class="pin-top">
 <?php if (get_theme_mod("color_wamp_page_header_top_option") == "image") {
     ?>
-<img src="<?php echo get_theme_mod("color_wamp_page_header_top_image")?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="banner-image w-full" />
+<img src="<?php echo esc_url(get_theme_mod("color_wamp_page_header_top_image"))?>" alt="<?php bloginfo('name', 'display'); ?>" class="banner-image w-full" />
 <br />
 <?php
 } elseif (get_theme_mod("color_wamp_page_header_top_option", "panel") == "panel") {
@@ -18,9 +18,9 @@
         <?php if ((!is_front_page() and !is_home()) and get_theme_mod("color_wamp_design_breadcrumb_post_setting", 1)) {
                 ?> 
                 <nav class="white px-4 my-4">
-            <a href="<?php echo get_home_url()?>" class="breadcrumb grey-text primary-text-hover"><?php _e("Home", "color-wamp")?></a>
-            <a href="<?php echo get_the_permalink()?>" class="breadcrumb grey-text primary-text-hover">
-                <?php echo get_the_title()?></a>
+            <a href="<?php home_url()?>" class="breadcrumb grey-text primary-text-hover"><?php esc_html_e("Home", "color-wamp")?></a>
+            <a href="<?php the_permalink()?>" class="breadcrumb grey-text primary-text-hover">
+                <?php the_title()?></a>
         </nav>
         <?php
             } ?>

@@ -28,20 +28,20 @@
             $fl = 4;
         }
     } ?>
-    <div class="col s12 m<?php echo $medium ?> mb-2">
+    <div class="col s12 m<?php echo esc_attr($medium) ?> mb-2">
       <?php if (has_custom_logo()) {
         ?>
       <div class="left mr-2 logo">
-        <img src="<?php echo esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo', get_template_directory_uri().'/images/wamp-round-logo.png'), "
-          full")[0])?>" alt="<?php echo get_bloginfo('name')?>" />
+        <img src="<?php $img = wp_get_attachment_image_src(get_theme_mod('custom_logo', get_template_directory_uri().'/images/wamp-round-logo.png'), "
+          full"); echo esc_url($img[0])?>" alt="<?php bloginfo('name')?>" />
       </div>
       <?php
     } ?>
       <div class="left">
         <h5 class="my-1"><strong>
-            <?php echo get_bloginfo("title")?></strong></h5>
+            <?php bloginfo("title")?></strong></h5>
         <p class="m-0 text-primary-light">
-          <?php echo get_bloginfo("description")?>
+          <?php bloginfo("description")?>
         </p>
       </div>
       <div class="clearfix"></div>
@@ -49,66 +49,72 @@
         ?>
       <div class="social-links">
         <h5>Follow Us:</h5>
-        <?php if (!empty(get_theme_mod("color_wamp_social_facebook", "#"))) {
+        <?php $social = get_theme_mod("color_wamp_social_facebook", "#"); if (!empty($social)) {
             ?>
-        <a href="<?php echo get_theme_mod("color_wamp_social_facebook")?>"
+        <a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_facebook"))?>"
           <?php echo get_theme_mod("color_wamp_social_facebook_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle facebook">
-          <img src="<?php echo get_template_directory_uri()?>/images/facebook-f-brands.svg" alt="Facebook Icon" />
+          <img src="<?php echo esc_attr(get_template_directory_uri())?>/images/facebook-f-brands.svg" alt="Facebook Icon" />
         </a>
         <?php
         }
-        if (!empty(get_theme_mod("color_wamp_social_twitter", "#"))) {
+        $social = get_theme_mod("color_wamp_social_twitter", "#");
+        if (!empty($social)) {
             ?>
-        <a href="<?php echo get_theme_mod("color_wamp_social_twitter")?>"
+        <a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_twitter"))?>"
           <?php echo get_theme_mod("color_wamp_social_twitter_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle twitter">
-          <img src="<?php echo get_template_directory_uri()?>/images/twitter-brands.svg" alt="Twitter Icon"/>
+          <img src="<?php echo esc_attr(get_template_directory_uri())?>/images/twitter-brands.svg" alt="Twitter Icon"/>
         </a>
         <?php
         }
-        if (!empty(get_theme_mod("color_wamp_social_linkedin", "#"))) {
+        $social = get_theme_mod("color_wamp_social_linkedin", "#");
+        if (!empty($social)) {
             ?>
-        <a href="<?php echo get_theme_mod("color_wamp_social_linkedin")?>"
+        <a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_linkedin"))?>"
           <?php echo get_theme_mod("color_wamp_social_linkedin_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle linkedin">
-          <img src="<?php echo get_template_directory_uri()?>/images/linkedin-in-brands.svg" alt="LinkedIn Icon" />
+          <img src="<?php echo esc_attr(get_template_directory_uri())?>/images/linkedin-in-brands.svg" alt="LinkedIn Icon" />
         </a>
         <?php
         }
-        if (!empty(get_theme_mod("color_wamp_social_instagram"))) {
+        $social = get_theme_mod("color_wamp_social_instagram", "#");
+        if (!empty($social)) {
             ?>
-        <a href="<?php echo get_theme_mod("color_wamp_social_instagram")?>"
+        <a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_instagram"))?>"
           <?php echo get_theme_mod("color_wamp_social_instagram_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle instagram">
-          <img src="<?php echo get_template_directory_uri()?>/images/instagram-brands.svg" alt="Instagram Icon"/>
+          <img src="<?php echo esc_attr(get_template_directory_uri())?>/images/instagram-brands.svg" alt="Instagram Icon"/>
         </a>
         <?php
         }
-        if (!empty(get_theme_mod("color_wamp_social_pinterest"))) {
+        $social = get_theme_mod("color_wamp_social_pinterest", "#");
+        if (!empty($social)) {
             ?>
-        <a href="<?php echo get_theme_mod("color_wamp_social_pinterest")?>"
+        <a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_pinterest"))?>"
           <?php echo get_theme_mod("color_wamp_social_pinterest_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle pinterest">
-          <img src="<?php echo get_template_directory_uri()?>/images/pinterest-p-brands.svg" alt="Pinterest Icon" />
+          <img src="<?php echo esc_attr(get_template_directory_uri())?>/images/pinterest-p-brands.svg" alt="Pinterest Icon" />
         </a>
         <?php
         }
-        if (!empty(get_theme_mod("color_wamp_social_youtube"))) {
+        $social = get_theme_mod("color_wamp_social_youtube", "#");
+        if (!empty($social)) {
             ?>
-        <a href="<?php echo get_theme_mod("color_wamp_social_youtube")?>"
+        <a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_youtube"))?>"
           <?php echo get_theme_mod("color_wamp_social_youtube_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
           btn-flat waves-effect waves-light waves-circle youtube">
-          <img src="<?php echo get_template_directory_uri()?>/images/youtube-brands.svg" alt="YouTube Icon"/>
+          <img src="<?php echo esc_attr(get_template_directory_uri())?>/images/youtube-brands.svg" alt="YouTube Icon"/>
         </a>
         <?php
         }
-        if (!empty(get_theme_mod("color_wamp_social_tumblr"))) {
+        $social = get_theme_mod("color_wamp_social_tumblr", "#");
+        if (!empty($social)) {
             ?>
-      <a href="<?php echo get_theme_mod("color_wamp_social_tumblr")?>"
+      <a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_tumblr"))?>"
         <?php echo get_theme_mod("color_wamp_social_tumblr_checkbox") ? "target='_blank'" : ""?> class="btn btn-floating
         btn-flat waves-effect waves-light waves-circle tumblr">
-        <img src="<?php echo get_template_directory_uri()?>/images/tumblr-brands.svg" alt="Tumblr Icon"/>
+        <img src="<?php echo esc_attr(get_template_directory_uri())?>/images/tumblr-brands.svg" alt="Tumblr Icon"/>
       </a>
       <?php
         } ?>
@@ -125,19 +131,19 @@
 
     <?php if (is_active_sidebar("footer_01")) {
         ?>
-    <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>">
+    <div class="col s12 m<?php echo esc_attr($fm)?> l<?php echo esc_attr($fl)?>">
         <?php dynamic_sidebar("footer_01"); ?>
 
     </div>
     <?php
     } else {
         ?>
-      <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>"><?php _e('Add some widgets from Admin Panel', 'color-wamp')?></div>
+      <div class="col s12 m<?php echo esc_attr($fm)?> l<?php echo esc_attr($fl)?>"><?php esc_attr_e('Add some widgets from Admin Panel', 'color-wamp')?></div>
       <?php
     }?>
     <?php if (is_active_sidebar("footer_02")) {
         ?>
-    <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>">
+    <div class="col s12 m<?php echo esc_attr($fm)?> l<?php echo esc_attr($fl)?>">
         <?php dynamic_sidebar("footer_02"); ?>
 
     </div>
@@ -145,7 +151,7 @@
     }?>
     <?php if (is_active_sidebar("footer_03")) {
         ?>
-    <div class="col s12 m<?php echo $fm?> l<?php echo $fl?>">
+    <div class="col s12 m<?php echo esc_attr($fm)?> l<?php echo esc_attr($fl)?>">
         <?php dynamic_sidebar("footer_03"); ?>
 
     </div>
@@ -175,19 +181,19 @@
   <div class="left">
     <p class="my-1">
       <?php if (get_theme_mod("color_wamp_footer_copyright_activate", 1)) {
-        ?><?php if (empty(get_theme_mod("color_wamp_footer_copyright_text", ''))) {
-            ?>Copyright &copy; 20<?php echo date("y")?> <?php
+        ?><?php $text = get_theme_mod("color_wamp_footer_copyright_text", ''); if (empty($text)) {
+            ?>Copyright &copy; 20<?php echo esc_html(date("y"))?> <?php
         } else {
-            echo get_theme_mod("color_wamp_footer_copyright_text", "Copyright &copy;");
+            echo esc_html(get_theme_mod("color_wamp_footer_copyright_text", "Copyright &copy;"));
         } ?> <span class="mx-1">|</span> <?php
-    } ?><a href="<?php echo get_home_url()?>" class="white-text"><strong>
-          <?php echo get_bloginfo("title")?></strong></a>
+    } ?><a href="<?php home_url()?>" class="white-text"><strong>
+          <?php bloginfo("title")?></strong></a>
           <?php if (get_theme_mod("color_wamp_footer_rights_activate", 1)) {
         ?> 
-         <span class="mx-1">|</span> <?php if (empty(get_theme_mod("color_wamp_footer_rights_text", 1))) {
+         <span class="mx-1">|</span> <?php $text = get_theme_mod("color_wamp_footer_rights_text", 1); if (empty($text)) {
             ?>All rights reserved. <?php
         } else {
-            echo get_theme_mod("color_wamp_footer_rights_text", "All rights reserved.");
+            echo esc_html(get_theme_mod("color_wamp_footer_rights_text", "All rights reserved."));
         }
     }
            ?> </p>
@@ -197,7 +203,7 @@
       by <a href="https://www.wampinfotech.com/" class="white-text"><strong>WAMP Infotech</strong></a> 
       <?php if (get_theme_mod("color_wamp_footer_wordpress_activate", 1)) {
                ?> <span class="mx-1">|</span>
-        Powered by <a href="https://wordpress.org/" class="white-text"><strong>Wordpress</strong></a>
+        Powered by <a href="https://wordpress.org/" class="white-text"><strong>WordPress</strong></a>
             <?php
            }?> </p>
   </div>
