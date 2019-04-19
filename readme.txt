@@ -3,7 +3,7 @@ Color WAMP is reponsive magazine style theme for 2019.
 Requires at least: 4.8
 Tested up to: 4.9.8
 Requires PHP: 5.5
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Contributors: none
 Donate link: https://www.wampinfotech.com/pay
 
@@ -52,6 +52,11 @@ All available options can be used from Appearance->Customize
 /**********************************************************/
 
 == Changelog ==
+= Version 1.2.1 = 
+* Post modified time added
+* Related Post HTML Eascaping solved
+* Minor Tweaks
+
 = Version 1.2.0 = 
 * Escaping functions applied on all text
 * Text-Domain added

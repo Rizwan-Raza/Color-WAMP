@@ -21,7 +21,10 @@
             <div class="card-content"> <?php
     } else {
         echo "<br /> ";
-    } ?><time class="grey-text left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr(get_the_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">access_time</i> <?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
+    } ?><?php if(get_the_modified_time() != get_the_time()) { ?>
+    <time class="grey-text left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_modified_time('Y'), get_the_modified_time('m'), get_the_modified_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr(get_the_modified_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">update</i> <?php echo esc_html(human_time_diff(get_the_modified_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
+    <?php } ?>
+    <time class="grey-text left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr(get_the_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">access_time</i> <?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
     <span class="left mr-2"><a href="<?php the_author_link()?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">person</i> <?php echo esc_html(ucfirst(get_the_author()))?></a></span>
     <span class="left mr-2"><a href="<?php echo esc_attr(get_comments_link())?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">forum</i> <?php comments_number()?> </a></span>
     <?php foreach (get_the_category() as $item) {

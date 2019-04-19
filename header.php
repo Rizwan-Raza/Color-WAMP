@@ -57,7 +57,7 @@ a {
     ?>
     <nav class="nav-extended">
         <div class="nav-wrapper white">
-            <a href="<?php home_url()?>" class="brand-logo mx-3">
+            <a href="<?php echo home_url()?>" class="brand-logo mx-3">
                 <?php if (has_custom_logo()) {
         ?>
                 <img src="<?php $img = wp_get_attachment_image_src(get_theme_mod('custom_logo', get_template_directory_uri().'/images/wamp-round-logo.png'), "full");echo esc_url($img[0])?>" alt="<?php bloginfo('name') ?>" class="brand-img hide-on-small-only" />

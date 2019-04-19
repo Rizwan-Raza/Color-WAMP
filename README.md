@@ -44,6 +44,15 @@ All available options can be used from Appearance->Customize
 
 
 ## Changelog
+### Version 1.2.1
+* Post modified time added
+* Related Post HTML Eascaping solved
+* Minor Tweaks
+
+### Version 1.2.0
+* Escaping functions applied on all text
+* Text-Domain added
+* Deprecated methods removed
 
 ### Version 1.1.0 
 * Optional Theme URI removed

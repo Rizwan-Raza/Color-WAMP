@@ -15,7 +15,11 @@
         ?> </div>
             <div class="card-content"> <?php
     } ?>
-            <time class="left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr( get_the_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">access_time</i> <?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
+            <?php if(get_the_modified_time() != get_the_time()) { ?>
+            <time class="left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_modified_time('Y'), get_the_modified_time('m'), get_the_modified_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="Last updated: <?php echo esc_attr( get_the_modified_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">update</i> <?php echo esc_html(human_time_diff(get_the_modified_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
+            <?php } ?>
+
+            <time class="left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="Posted on: <?php echo esc_attr( get_the_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">access_time</i> <?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
             
             <span class="left mr-2"><a href="<?php echo esc_attr(get_author_posts_url(get_the_author_meta('ID'))) ?>" data-tooltip="Posts by <?php echo esc_attr(ucfirst(get_the_author()))?>" class="grey-text primary-text-hover tooltipped"><i class="material-icons left mr-1">person</i> <?php echo esc_html(ucfirst(get_the_author()))?></a></span>
             
