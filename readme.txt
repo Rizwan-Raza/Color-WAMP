@@ -52,6 +52,11 @@ All available options can be used from Appearance->Customize
 /**********************************************************/
 
 == Changelog ==
+= Version 1.3.0 =
+* Internal CSS Removed
+* Default Logo Removed
+* Social Icons Revamped
+
 = Version 1.2.1 = 
 * Post modified time added
 * Related Post HTML Eascaping solved
