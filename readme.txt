@@ -52,6 +52,11 @@ All available options can be used from Appearance->Customize
 /**********************************************************/
 
 == Changelog ==
+= Version 1.3.1 =
+* Comments list type issue solved
+* left margin provided to Comments
+* font weight issue solved
+
 = Version 1.3.0 =
 * Internal CSS Removed
 * Default Logo Removed

@@ -1,7 +1,7 @@
 /*
 Theme Name: Color WAMP
 Description: Color WAMP is a WordPress theme, design and developed by WAMP InfoTech based on Google Material Design and WAMP Infotech Web Design using MaterializeCSS UI Framework with Material Icons. Color WAMP is perfectly responsive theme and free to use.
-Version: 1.3.0
+Version: 1.3.1
 Author: WAMP Infotech Pvt Ltd
 Author URI: https://www.wampinfotech.com/team
 License: GNU General Public License, version 3 (GPLv3)
@@ -384,7 +384,7 @@ nav .nav-wrapper h1 small {
 }
 
 .fw-500 {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 .brand-logo h1 {
@@ -549,7 +549,7 @@ hr.thin {
     list-style-type: initial;
 }
 
-.card .card-content .post-content ul li {
+.card .card-content .post-content :not(#comments) ul li {
     list-style-type: initial;
 }
 
@@ -589,7 +589,7 @@ hr.thin {
     color: #fff !important;
 }
 
-.comment-list ul.children {
+.comments-area ul ul.children {
     margin-left: calc(48px + 0.5rem);
 }
 
