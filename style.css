@@ -544,7 +544,7 @@ hr.thin {
     margin-bottom: 15px;
 }
 
-.card .card-content .post-content ul {
+.card .card-content .post-content :not(#comments) ul {
     padding-left: 40px;
     list-style-type: initial;
 }
