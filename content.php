@@ -22,11 +22,11 @@
     } else {
         echo "<br /> ";
     } ?><?php if(get_the_modified_time() != get_the_time()) { ?>
-    <time class="grey-text left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_modified_time('Y'), get_the_modified_time('m'), get_the_modified_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr(get_the_modified_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">update</i> <?php echo esc_html(human_time_diff(get_the_modified_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
+    <time class="grey-text left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_modified_time('Y'), get_the_modified_time('m'), get_the_modified_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr(get_the_modified_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">&#xe923</i> <?php echo esc_html(human_time_diff(get_the_modified_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
     <?php } ?>
-    <time class="grey-text left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr(get_the_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">access_time</i> <?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
-    <span class="left mr-2"><a href="<?php the_author_link()?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">person</i> <?php echo esc_html(ucfirst(get_the_author()))?></a></span>
-    <span class="left mr-2"><a href="<?php echo esc_attr(get_comments_link())?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">forum</i> <?php comments_number()?> </a></span>
+    <time class="grey-text left mr-2"><a href="<?php echo esc_attr(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')))?>" class="grey-text primary-text-hover tooltipped" data-tooltip="<?php echo esc_attr(get_the_time("D, j M Y \a\\t h:i A"))?>"><i class="material-icons left mr-1">&#xe192</i> <?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) . ' ago'?></a></time>
+    <span class="left mr-2"><a href="<?php the_author_link()?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">&#xe7fd</i> <?php echo esc_html(ucfirst(get_the_author()))?></a></span>
+    <span class="left mr-2"><a href="<?php echo esc_attr(get_comments_link())?>" class="grey-text primary-text-hover"><i class="material-icons left mr-1">&#xe0bf</i> <?php comments_number()?> </a></span>
     <?php foreach (get_the_category() as $item) {
         ?>
     <a href="<?php echo esc_attr(get_category_link($item->term_id))?>"><span class="chip white-text right" style="background-color: <?php echo esc_attr(get_theme_mod('color_wamp_category_color_' . $item->term_id, get_theme_mod("color_wamp_theme_color_setting", "#3d85c6")))?>" data-badge-caption=""><?php echo esc_html($item->name)?></span></a>

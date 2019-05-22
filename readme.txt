@@ -4,6 +4,7 @@ Requires at least: 4.8
 Tested up to: 4.9.8
 Requires PHP: 5.5
 Stable tag: 1.2.0
+Tags: two-columns, right-sidebar, flexible-header, custom-header, custom-background, custom-menu, custom-colors, threaded-comments, featured-images, theme-options, post-formats, footer-widgets, blog, news
 Contributors: none
 Donate link: https://www.wampinfotech.com/pay
 
@@ -20,7 +21,7 @@ It also works great with WP 5.0 - and also should with WP 4.8 - but we only test
 
 == Screenshots ==
 
-* Color WAMP Homepage with default banner and dummy post (running with WordPress 5.0 here)
+* screenshot.png - Color WAMP Homepage with default banner and dummy post (running with WordPress 5.0 here)
 
 /**********************************************************/
 
@@ -29,6 +30,8 @@ It also works great with WP 5.0 - and also should with WP 4.8 - but we only test
 Resources packed within the theme.
 * MaterilizeCSS http://materializecss.com/
 * Google Fonts http://fonts.google.com/
+* Screenshot screenshot.png http://www.wampinfotech.com
+* Banner Image back_banner.jpg http://www.wampinfotech.com
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-3.0.txt), version 3 or later.
 
@@ -52,6 +55,13 @@ All available options can be used from Appearance->Customize
 /**********************************************************/
 
 == Changelog ==
+= Version 1.3.2 =
+* Transalational Text Added
+* HTML Entity based Icon added
+* Escaping Issue resolved
+* License Issue resolved
+* Some more issue tweaked and resolved
+
 = Version 1.3.1 =
 * Comments list type issue solved
 * left margin provided to Comments

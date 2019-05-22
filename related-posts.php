@@ -21,11 +21,11 @@
                            <?php the_title(); ?></a>
                      </h3>
 
-                     <div class="posted-on"><a href="<?php echo esc_url(get_permalink()) ?>" data-tooltip="<?php echo esc_attr(get_the_time("D, j M Y \a\\t h:i A")) ?>" rel="bookmark" class="tooltipped"><i class="material-icons left">access_time</i><time datetime="<?php echo esc_attr(get_the_date('c')) ?>"><?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) ?></time> ago</a></div>
+                     <div class="posted-on"><a href="<?php echo esc_url(get_permalink()) ?>" data-tooltip="<?php echo esc_attr(get_the_time("D, j M Y \a\\t h:i A")) ?>" rel="bookmark" class="tooltipped"><i class="material-icons left">&#xe192</i><time datetime="<?php echo esc_attr(get_the_date('c')) ?>"><?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))) ?></time> ago</a></div>
 
                      <div class="clearfix"><a class="tooltipped" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))) ?>" data-tooltip="Posted by <?php echo esc_attr(ucfirst(get_the_author())) ?>">
-                           <i class="material-icons left">person</i><?php echo esc_html(ucfirst(esc_html(get_the_author()))) ?></a></div>
-                     <div class="clearfix"><a href="<?php echo esc_url(get_comments_link()) ?>"><i class="material-icons left">forum</i> <?php comments_number() ?> </a></div>
+                           <i class="material-icons left">&#xe7fd</i><?php echo esc_html(ucfirst(get_the_author())) ?></a></div>
+                     <div class="clearfix"><a href="<?php echo esc_url(get_comments_link()) ?>"><i class="material-icons left">&#xe0bf</i> <?php comments_number() ?> </a></div>
                   </div>
                </div>
             </div>

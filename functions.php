@@ -38,7 +38,7 @@ function color_wamp_styles()
 function color_wamp_scripts()
 {
     // wp_enqueue_script("jquery", "https://code.jquery.com/jquery-3.3.1.min.js", array(), "3.3.1", true);
-    wp_enqueue_script("materializecss_js", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js", array(), "1.0.0", true);
+    wp_enqueue_script("materializecss_js", get_template_directory_uri() . "/js/materialize.min.js", array(), "1.0.0", true);
 }
 add_action("wp_enqueue_scripts", "color_wamp_styles");
 add_action("wp_enqueue_scripts", "color_wamp_scripts");
@@ -231,7 +231,7 @@ function color_wamp_customizer_panel($wp_customize)
         'sanitize_callback' => 'color_wamp_checkbox_sanitize'
     ));
 
-    $wp_customize->add_control('color_wamp_social_link_activate', array(
+    $wp_customize->add_control('color_wamp_social_link_activate_settings', array(
         'type'     => 'checkbox',
         'label'    => __("Check to activate social links area", "color-wamp"),
         'section'  => 'color_wamp_social_links_option',

@@ -46,7 +46,7 @@
         </p>
       </div>
       <div class="clearfix"></div>
-      <?php if (get_theme_mod("color_wamp_social_link_activate") and (get_theme_mod('color_wamp_social_link_location_option', 'both') == "both" or get_theme_mod('color_wamp_social_link_location_option') == "footer")) {
+      <?php if (get_theme_mod("color_wamp_social_link_activate_settings") and (get_theme_mod('color_wamp_social_link_location_option', 'both') == "both" or get_theme_mod('color_wamp_social_link_location_option') == "footer")) {
         ?>
         <div class="social-links">
           <h5>Follow Us:</h5>

@@ -38,55 +38,55 @@
                 </h1>
             </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <?php if (get_theme_mod("color_wamp_social_link_activate", 1) and (get_theme_mod('color_wamp_social_link_location_option', 'both') == "both" or get_theme_mod('color_wamp_social_link_location_option') == "header")) {
+            <?php if (get_theme_mod("color_wamp_social_link_activate_settings") and (get_theme_mod('color_wamp_social_link_location_option', 'both') == "both" or get_theme_mod('color_wamp_social_link_location_option') == "header")) {
                 ?>
                 <ul class="right hide-on-med-and-down social-links">
                     <?php $social = get_theme_mod("color_wamp_social_f");
                     if (!empty($social)) {
                         ?>
-                        <li><a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_f")) ?>" <?php echo get_theme_mod("color_wamp_social_f_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle facebook"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/images/f.svg" alt="Social Icon" /></a></li>
+                        <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_f")) ?>" <?php echo get_theme_mod("color_wamp_social_f_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle facebook"><img src="<?php echo esc_url(get_template_directory_uri()) ?>/images/f.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /></a></li>
                     <?php
                 }
                 $social = get_theme_mod("color_wamp_social_t");
                 if (!empty($social)) {
                     ?>
-                        <li><a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_t")) ?>" <?php echo get_theme_mod("color_wamp_social_t_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle twitter"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/images/t.svg" alt="Social Icon" /></a></li>
+                        <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_t")) ?>" <?php echo get_theme_mod("color_wamp_social_t_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle twitter"><img src="<?php echo esc_url(get_template_directory_uri()) ?>/images/t.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /></a></li>
                     <?php
                 }
                 $social = get_theme_mod("color_wamp_social_l");
                 if (!empty($social)) {
                     ?>
-                        <li><a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_l")) ?>" <?php echo get_theme_mod("color_wamp_social_l_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle linkedin"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/images/l.svg" alt="Social Icon" /></a></li>
+                        <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_l")) ?>" <?php echo get_theme_mod("color_wamp_social_l_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle linkedin"><img src="<?php echo esc_url(get_template_directory_uri()) ?>/images/l.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /></a></li>
                     <?php
                 }
                 $social = get_theme_mod("color_wamp_social_i");
                 if (!empty($social)) {
                     ?>
-                        <li><a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_i")) ?>" <?php echo get_theme_mod("color_wamp_social_i_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle instagram"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/images/i.svg" alt="Social Icon" /></a></li>
+                        <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_i")) ?>" <?php echo get_theme_mod("color_wamp_social_i_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle instagram"><img src="<?php echo esc_url(get_template_directory_uri()) ?>/images/i.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /></a></li>
                     <?php
                 }
                 $social = get_theme_mod("color_wamp_social_p");
                 if (!empty($social)) {
                     ?>
-                        <li><a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_p")) ?>" <?php echo get_theme_mod("color_wamp_social_p_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle pinterest"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/images/p.svg" alt="Social Icon" /></a></li>
+                        <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_p")) ?>" <?php echo get_theme_mod("color_wamp_social_p_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle pinterest"><img src="<?php echo esc_url(get_template_directory_uri()) ?>/images/p.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /></a></li>
                     <?php
                 }
                 $social = get_theme_mod("color_wamp_social_y");
                 if (!empty($social)) {
                     ?>
-                        <li><a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_y")) ?>" <?php echo get_theme_mod("color_wamp_social_y_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle youtube"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/images/y.svg" alt="Social Icon" /></a></li>
+                        <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_y")) ?>" <?php echo get_theme_mod("color_wamp_social_y_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle youtube"><img src="<?php echo esc_url(get_template_directory_uri()) ?>/images/y.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /></a></li>
                     <?php
                 }
                 $social = get_theme_mod("color_wamp_social_tu");
                 if (!empty($social)) {
                     ?>
-                        <li><a href="<?php echo esc_attr(get_theme_mod("color_wamp_social_tu")) ?>" <?php echo get_theme_mod("color_wamp_social_tu_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle tumblr"><img src="<?php echo esc_attr(get_template_directory_uri()) ?>/images/tu.svg" alt="Social Icon" /></a></li>
+                        <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_tu")) ?>" <?php echo get_theme_mod("color_wamp_social_tu_checkbox") ? "target='_blank'" : "" ?> class="btn-floating btn-flat waves-effect waves-dark waves-circle tumblr"><img src="<?php echo esc_url(get_template_directory_uri()) ?>/images/tu.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /></a></li>
                     <?php
                 } ?>
 
                 </ul>
                 <ul id="nav-mobile" class="right hide-on-large-only">
-                    <li><a href="#" class="dropdown-trigger btn-floating btn-flat waves-effect waves-dark waves-circle transparent" data-target='mobile_more_social'><i class="material-icons">more_vert</i></a></li>
+                    <li><a href="#" class="dropdown-trigger btn-floating btn-flat waves-effect waves-dark waves-circle transparent" data-target='mobile_more_social'><i class='material-icons'>&#xe5d4</i></a></li>
                 </ul>
             <?php
         } ?>
@@ -96,7 +96,7 @@
         <ul class="tabs tabs-transparent fw-500">
             <?php if (get_theme_mod('color_wamp_home_menu_header_setting', 1)) {
                 ?>
-                <li class="tab scale-transition menu-item"><a href="<?php home_url() ?>"><?php esc_html_e("Home", "color-wamp") ?></a></li>
+                <li class="tab scale-transition menu-item"><a href="<?php echo esc_url(get_home_url())?>"><?php esc_html_e("Home", "color-wamp") ?></a></li>
             <?php
         } ?>
             <?php if (has_nav_menu("main-header-menu")) {
@@ -112,7 +112,7 @@
                 ?> <li class="tab right search">
                     <form action="<?php echo esc_url(home_url('/')) ?>" class="search-form clearfix" method="get">
                         <div class="input-field my-1"><input name="s" id="search-top" type="search" class="right" placeholder="<?php esc_attr_e('Enter query and press `enter`', 'color-wamp') ?>" /></div>
-                    </form><button class="right btn-floating btn-flat white-text transparent waves-circle waves-effect waves-light" tabindex="-1" onclick="toggleSearch(this)"><i class="material-icons">search</i></button>
+                    </form><button class="right btn-floating btn-flat white-text transparent waves-circle waves-effect waves-light" tabindex="-1" onclick="toggleSearch(this)"><i class='material-icons'>&#xe8b6</i></button>
                 </li>
             <?php
         } ?>
@@ -120,7 +120,7 @@
     </div>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="<?php home_url() ?>"><?php esc_attr_e("Home", "color-wamp") ?></a></li>
+        <li><a href="<?php echo esc_url(get_home_url())?>"><?php esc_attr_e("Home", "color-wamp") ?></a></li>
         <?php
         wp_nav_menu(array(
             'theme_location' => 'main-sidebar-menu',
@@ -141,43 +141,43 @@
         <?php $social = get_theme_mod("color_wamp_social_f");
         if (!empty($social)) {
             ?>
-            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_f")) ?>" <?php echo get_theme_mod("color_wamp_social_f_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/f.svg" alt="Social Icon" /> Facebook</a></li>
+            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_f")) ?>" <?php echo get_theme_mod("color_wamp_social_f_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/f.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /> <?php esc_attr_e("Facebook", "color-wamp")?></a></li>
         <?php
     }
     $social = get_theme_mod("color_wamp_social_t");
     if (!empty($social)) {
         ?>
-            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_t")) ?>" <?php echo get_theme_mod("color_wamp_social_t_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/t.svg" alt="Social Icon" /> Twitter</a></li>
+            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_t")) ?>" <?php echo get_theme_mod("color_wamp_social_t_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/t.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /> <?php esc_attr_e("Twitter", "color-wamp")?></a></li>
         <?php
     }
     $social = get_theme_mod("color_wamp_social_l");
     if (!empty($social)) {
         ?>
-            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_l")) ?>" <?php echo get_theme_mod("color_wamp_social_l_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/l.svg" alt="Social Icon" /> LinkedIn</a></li>
+            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_l")) ?>" <?php echo get_theme_mod("color_wamp_social_l_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/l.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /> <?php esc_attr_e("LinkedIn", "color-wamp")?></a></li>
         <?php
     }
     $social = get_theme_mod("color_wamp_social_i");
     if (!empty($social)) {
         ?>
-            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_i")) ?>" <?php echo get_theme_mod("color_wamp_social_i_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/i.svg" alt="Social Icon" /> Instagram</a></li>
+            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_i")) ?>" <?php echo get_theme_mod("color_wamp_social_i_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/i.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /> <?php esc_attr_e("Instagram", "color-wamp")?></a></li>
         <?php
     }
     $social = get_theme_mod("color_wamp_social_p");
     if (!empty($social)) {
         ?>
-            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_p")) ?>" <?php echo get_theme_mod("color_wamp_social_p_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/p.svg" alt="Social Icon" /> Pinterest</a></li>
+            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_p")) ?>" <?php echo get_theme_mod("color_wamp_social_p_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/p.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /> <?php esc_attr_e("Pinterest", "color-wamp")?></a></li>
         <?php
     }
     $social = get_theme_mod("color_wamp_social_y");
     if (!empty($social)) {
         ?>
-            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_y")) ?>" <?php echo get_theme_mod("color_wamp_social_y_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/y.svg" alt="Social Icon" /> Youtube</a></li>
+            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_y")) ?>" <?php echo get_theme_mod("color_wamp_social_y_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/y.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /> <?php esc_attr_e("Youtube", "color-wamp")?></a></li>
         <?php
     }
     $social = get_theme_mod("color_wamp_social_tu");
     if (!empty($social)) {
         ?>
-            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_tu")) ?>" <?php echo get_theme_mod("color_wamp_social_tu_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/tu.svg" alt="Social Icon" /> Tumblr</a></li>
+            <li><a href="<?php echo esc_url(get_theme_mod("color_wamp_social_tu")) ?>" <?php echo get_theme_mod("color_wamp_social_tu_checkbox") ? "target='_blank'" : "" ?>><img class="left mr-2" src="<?php echo esc_url(get_template_directory_uri()) ?>/images/tu.svg" alt="<?php esc_attr_e("Social Icon", "color-wamp")?>" /> <?php esc_attr_e("Tumblr", "color-wamp")?></a></li>
         <?php
     } ?>
     </ul>

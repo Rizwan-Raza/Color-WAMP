@@ -19,7 +19,7 @@
                 ?> 
                 
         <nav class="white px-4 my-4">
-            <a href="<?php home_url()?>" class="breadcrumb grey-text primary-text-hover">Home</a>
+            <a href="<?php echo esc_url(get_home_url())?>" class="breadcrumb grey-text primary-text-hover"><?php esc_html_e("Home", "color-wamp")?></a>
             <a href="<?php the_permalink()?>" class="breadcrumb grey-text primary-text-hover">
                 <?php the_title()?></a>
         </nav>

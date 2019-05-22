@@ -11,7 +11,7 @@ if (post_password_required()) {
 	<?php if (have_comments()) : ?>
 		<br />
 		<hr class="thin grey lighten-1 my-2" />
-		<h3 class="comments-title"><i class="material-icons mr-2">comment</i><?php esc_html_e('Comments', 'color-wamp')?>	</h3>
+		<h3 class="comments-title"><i class="material-icons mr-2">&#xe0b9</i><?php esc_html_e('Comments', 'color-wamp')?>	</h3>
 
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // are there comments to navigate through?>
 		<nav id="comment-nav-above" class="comment-navigation clearfix" role="navigation">
