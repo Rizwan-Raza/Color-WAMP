@@ -3,7 +3,7 @@ Color WAMP is reponsive magazine style theme for 2019.
 * Requires at least: 3.0.1
 * Tested up to: 5.1.1
 * Requires PHP: 5.2.4
-* Stable tag: 1.0.3
+* Stable tag: 1.3.3
 * Contributors: none
 * Donate link: [https://www.wampinfotech.com/pay](https://www.wampinfotech.com/pay)
 
@@ -18,15 +18,22 @@ It also works great with WP 5.0 - and also should with WP 3.1 - but we only test
 
 ## Screenshots 
 
-* Color WAMP Homepage with default banner and dummy post (running with WordPress 5.0 here)
+* screenshot.png - https://www.wampinfotech.com/images/screenshot.png - Color WAMP Homepage with default banner and dummy post (running with WordPress 5.0 here)
+
+## Installation guidelines
+ 1. In your admin panel, go to Appearance > Themes and click the Add New button.
+ 2. Click Upload Theme and Choose File, then select the theme’s .zip file. 
+ 3. Click Install Now.
+ 4. Click Activate to use your new theme right away.
+
 
 ## COPYRIGHT AND LICENSE
 
 Resources packed within the theme.
 * [MaterilizeCSS](http://materializecss.com/)
 * [Google Fonts](http://fonts.google.com/)
-* [Screenshot screenshot.png](http://www.wampinfotech.com)
-* [Banner Image back_banner.jpg](http://www.wampinfotech.com)
+* [Screenshot screenshot.png](https://www.wampinfotech.com/images/screenshot.png)
+* [Banner Image back_banner.jpg](https://www.wampinfotech.com/images/banner1.jpg)
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-3.0.txt), version 3 or later.
 
@@ -46,6 +53,13 @@ All available options can be used from Appearance->Customize
 
 
 ## Changelog
+### Version 1.3.3
+* Language domain en_US added
+* Screenshot Image optimized
+* License Issue resolved
+* Installationn guidelines added
+
+
 ### Version 1.3.2 
 * Transalational Text Added
 * HTML Entity based Icon added

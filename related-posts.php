@@ -8,7 +8,7 @@
          <div class="col s12 m6 l4">
             <?php if (has_post_thumbnail()) {
                ?>
-               <div class="card force-a-white" style="background-image: url('<?php the_post_thumbnail_url('small-thumbnail') ?>')">
+               <div class="card force-a-white" style="background-image: url('<?php the_post_thumbnail_url('theme-wamp-small-thumbnail') ?>')">
                <?php
             } else {
                ?>

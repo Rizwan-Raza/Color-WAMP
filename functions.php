@@ -37,8 +37,7 @@ function color_wamp_styles()
 
 function color_wamp_scripts()
 {
-    // wp_enqueue_script("jquery", "https://code.jquery.com/jquery-3.3.1.min.js", array(), "3.3.1", true);
-    wp_enqueue_script("materializecss_js", get_template_directory_uri() . "/js/materialize.min.js", array(), "1.0.0", true);
+    wp_enqueue_script("materializecss_js", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js", array(), "1.0.0", true);
 }
 add_action("wp_enqueue_scripts", "color_wamp_styles");
 add_action("wp_enqueue_scripts", "color_wamp_scripts");
@@ -87,6 +86,15 @@ function color_wamp_custom_logo_setup()
 
 add_action("after_setup_theme", "color_wamp_custom_logo_setup");
 
+
+
+function color_wamp_lang_setup()
+{
+    load_theme_textdomain('color-wamp', get_template_directory() . '/languages');
+}
+
+add_action('after_setup_theme', 'color_wamp_lang_setup');
+
 function color_wamp_post_supports()
 {
 
@@ -94,8 +102,10 @@ function color_wamp_post_supports()
     add_theme_support('automatic-feed-links');
 
     add_theme_support("post-thumbnails");
-    add_image_size("small-thumbnail", 320, 180, true);
-    add_image_size("banner-image", 800, 450, true);
+    // For Stacked Post view
+    add_image_size("color-wamp-small-thumbnail", 320, 180, true);
+    // For Full page view
+    add_image_size("color-wamp-banner-image", 800, 450, true);
 
     // Setup the WordPress core custom background feature.
     add_theme_support('custom-background', apply_filters('color_wamp_custom_background_args', array(
@@ -103,7 +113,7 @@ function color_wamp_post_supports()
     )));
 
 
-    add_theme_support('custom-header', apply_filters('colormag_custom_header_args', array(
+    add_theme_support('custom-header', apply_filters('color_wamp_custom_header_args', array(
         'default-image'                => '',
         'header-text'                => '',
         'default-text-color'        => '',
@@ -114,7 +124,7 @@ function color_wamp_post_supports()
         'wp-head-callback'            => '',
         'admin-head-callback'        => '',
         'video'                        => false,
-        'admin-preview-callback'    => 'colormag_admin_header_image',
+        'admin-preview-callback'    => 'color_wamp_admin_header_image',
     )));
 
     add_theme_support('title-tag');
@@ -845,30 +855,6 @@ function move_comment_form_below($fields)
     return $fields;
 }
 add_filter('comment_form_fields', 'move_comment_form_below');
-
-// Add placeholder for Name and Email
-// function modify_comment_form_fields($fields, $commenter)
-// {
-//     $fields['author'] = '<br /><p class="input-field">' . '<input id="author" name="author" type="text" value="' .
-//                 esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' />'.
-//                 '<label for="author">' . 'Your Name' . '</label> ' .
-//                 ($req ? '<span class="required">*</span>' : '')  .
-//                 '</p><br />';
-//     $fields['email'] = '<p class="input-field">' . '<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) .
-//                 '" size="30"' . $aria_req . ' />'  .
-//                 '<label for="email">' . 'Your Email' . '</label> ' .
-//                 ($req ? '<span class="required">*</span>' : '')
-//                  .
-//                 '</p><br />';
-//     $fields['url'] = '<p class="input-field">' .
-//              '<input id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /> ' .
-//             '<label for="url">' . 'Website' . '</label>' .
-//                '</p>';
-
-
-//     return $fields;
-// }
-// add_filter('comment_form_default_fields', 'modify_comment_form_fields');
 
 function color_wamp_comment_form_defaults($defaults)
 {
