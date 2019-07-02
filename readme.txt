@@ -3,7 +3,7 @@ Color WAMP is reponsive magazine style theme for 2019.
 Requires at least: 4.8
 Tested up to: 5.1.1
 Requires PHP: 5.2.4
-Version: 1.3.3
+Version: 1.3.4
 License: GNU General Public License, version 3 (GPLv3)
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 Tags: two-columns, right-sidebar, flexible-header, custom-header, custom-background, custom-menu, custom-colors, threaded-comments, featured-images, theme-options, post-formats, footer-widgets, blog, news
@@ -41,9 +41,9 @@ Resources packed within the theme.
 * MaterilizeCSS http://materializecss.com/
 * Google Fonts http://fonts.google.com/
 * Screenshot screenshot.png - https://www.wampinfotech.com/images/screenshot.png
-* Images in the screenshot is from https://blog.wampinfotech.com/ link - https://www.wampinfotech.com/images/banner1.jpg. License: CC0 Public Domain
-* Banner Image back_banner.jpg is from https://www.wampinfotech.com - link https://www.wampinfotech.com/images/banner1.jpg
-
+* Images in the screenshot is from https://blog.wampinfotech.com/ link - https://www.wampinfotech.com/images/banner1.jpg.
+* Banner Image back_banner.jpg is from https://www.pexels.com/photo/group-hand-fist-bump-1068523/  License: CC0 Public Domain
+* Social Vector Images (f.svg, i.svg, l.svg, p.svg ...)
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-3.0.txt), version 3 or later.
 
 Color WAMP WordPress Theme, Copyright 2019 WAMP Infotech
@@ -66,6 +66,12 @@ All available options can be used from Appearance->Customize
 /**********************************************************/
 
 == Changelog ==
+= Version 1.3.4 =
+* Default Logo Images removed
+* Screenshot Image licensed
+* Language domain filtered
+
+
 = Version 1.3.3 =
 * Language domain en_US added
 * Screenshot Image optimized

@@ -430,7 +430,7 @@ function color_wamp_customizer_panel($wp_customize)
 
     // Home Header Display Option
     $wp_customize->add_setting("color_wamp_home_header_top_option", array(
-        "default" => "image",
+        "default" => "panel",
         "capability" => "edit_theme_options",
         'sanitize_callback' => 'color_wamp_radio_select_sanitize'
 

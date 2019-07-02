@@ -33,7 +33,8 @@ Resources packed within the theme.
 * [MaterilizeCSS](http://materializecss.com/)
 * [Google Fonts](http://fonts.google.com/)
 * [Screenshot screenshot.png](https://www.wampinfotech.com/images/screenshot.png)
-* [Banner Image back_banner.jpg](https://www.wampinfotech.com/images/banner1.jpg)
+* [Banner Image back_banner.jpg](https://www.pexels.com/photo/group-hand-fist-bump-1068523/)
+* Social Vector Images (f.svg, i.svg, l.svg, p.svg ...)
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-3.0.txt), version 3 or later.
 
@@ -53,6 +54,12 @@ All available options can be used from Appearance->Customize
 
 
 ## Changelog
+
+### Version 1.3.4
+* Default Logo Images removed
+* Screenshot Image licensed
+* Language domain filtered
+
 ### Version 1.3.3
 * Language domain en_US added
 * Screenshot Image optimized
