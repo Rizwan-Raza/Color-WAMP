@@ -269,6 +269,7 @@ nav .nav-wrapper h1 small {
     position: absolute;
     z-index: 9999;
     left: 0;
+    text-align: left;
     transition: all 0.3s ease;
     -webkit-transform: scale(0);
     transform: scale(0);
@@ -542,14 +543,15 @@ hr.thin {
 .card .card-content .post-content p {
     margin-top: 15px;
     margin-bottom: 15px;
+    font-size: 16px;
 }
 
-.card .card-content .post-content :not(#comments) ul {
+.card .card-content .post-content ul {
     padding-left: 40px;
     list-style-type: initial;
 }
 
-.card .card-content .post-content :not(#comments) ul li {
+.card .card-content .post-content ul li {
     list-style-type: initial;
 }
 

@@ -5,7 +5,7 @@
 
         <div id="site-header">
             <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                <img src="<?php echo esc_url(get_theme_mod("color_wamp_home_header_top_image")) ?>" alt="<?php bloginfo('name', 'display'); ?>" class="banner-image home-banner w-full">
+                <img src="<?php echo esc_url(get_theme_mod("color_wamp_home_header_top_image", get_template_directory_uri() . "/images/back_banner.jpg")) ?>" alt="<?php bloginfo('name', 'display'); ?>" class="banner-image home-banner w-full">
             </a>
         </div>
         <br />
