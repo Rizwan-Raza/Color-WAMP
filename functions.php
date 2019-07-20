@@ -1,7 +1,7 @@
 <?php
 function color_wamp_styles()
 {
-    wp_enqueue_style("materializecss_css", get_template_directory_uri() . "/styles/materializecss.css");
+    wp_enqueue_style("materializecss_css", get_template_directory_uri() . "/styles/materialize.min.css");
     wp_enqueue_style("theme_wamp_material_icons", get_template_directory_uri() . "/styles/material-icons.css");
     wp_enqueue_style("main_style", get_stylesheet_uri());
 
@@ -37,7 +37,7 @@ function color_wamp_styles()
 
 function color_wamp_scripts()
 {
-    wp_enqueue_script("materializecss_js", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js", array(), "1.0.0", true);
+    wp_enqueue_script("materializecss_js", get_template_directory_uri() . "/js/materialize.min.js", array(), "1.0.0", true);
     wp_enqueue_script("script_js", get_template_directory_uri() . "/js/script.js", array(), "1.0.0", true);
     if (get_theme_mod('color_wamp_home_search_header_setting', 1)) {
         wp_enqueue_script("search_script", get_template_directory_uri() . "/js/search.js");
