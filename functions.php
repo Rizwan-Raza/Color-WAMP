@@ -1,8 +1,8 @@
 <?php
 function color_wamp_styles()
 {
-    wp_enqueue_style("materializecss_css", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
-    wp_enqueue_style("material_icons", "https://fonts.googleapis.com/icon?family=Material+Icons");
+    wp_enqueue_style("materializecss_css", get_template_directory_uri() . "/styles/materializecss.css");
+    wp_enqueue_style("theme_wamp_material_icons", get_template_directory_uri() . "/styles/material-icons.css");
     wp_enqueue_style("main_style", get_stylesheet_uri());
 
     $custom_css = "
@@ -23,7 +23,7 @@ function color_wamp_styles()
         position: " . (esc_attr(get_theme_mod("color_wamp_sticky_header_setting", 1)) ? "sticky" : "static") . " !important;
     }";
 
-    if (get_theme_mod("color_wamp_theme_color_setting", "#3d85c6") != "#3d85c6") {
+    if (get_theme_mod("color_wamp_theme_color_setting") != "#3d85c6") {
 
         $custom_css .= "::-webkit-scrollbar-thumb,
         ::-webkit-scrollbar-thumb:hover,
@@ -38,6 +38,10 @@ function color_wamp_styles()
 function color_wamp_scripts()
 {
     wp_enqueue_script("materializecss_js", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js", array(), "1.0.0", true);
+    wp_enqueue_script("script_js", get_template_directory_uri() . "/js/script.js", array(), "1.0.0", true);
+    if (get_theme_mod('color_wamp_home_search_header_setting', 1)) {
+        wp_enqueue_script("search_script", get_template_directory_uri() . "/js/search.js");
+    }
 }
 add_action("wp_enqueue_scripts", "color_wamp_styles");
 add_action("wp_enqueue_scripts", "color_wamp_scripts");
@@ -54,7 +58,7 @@ function color_wamp_menus_registration()
 
 add_action("init", "color_wamp_menus_registration");
 
-function main_header_menu_classes($classes, $item, $args, $depth)
+function color_wamp_main_header_menu_classes($classes, $item, $args, $depth)
 {
     if ($args->menu == 'main-header-menu') {
         if ($depth == 0) {
@@ -68,7 +72,7 @@ function main_header_menu_classes($classes, $item, $args, $depth)
     return $classes;
 }
 
-add_filter('nav_menu_css_class', 'main_header_menu_classes', 1, 4);
+add_filter('nav_menu_css_class', 'color_wamp_main_header_menu_classes', 1, 4);
 
 function color_wamp_custom_logo_setup()
 {
@@ -110,21 +114,6 @@ function color_wamp_post_supports()
     // Setup the WordPress core custom background feature.
     add_theme_support('custom-background', apply_filters('color_wamp_custom_background_args', array(
         'default-color' => 'eaeaea',
-    )));
-
-
-    add_theme_support('custom-header', apply_filters('color_wamp_custom_header_args', array(
-        'default-image'                => '',
-        'header-text'                => '',
-        'default-text-color'        => '',
-        'width'                        => 1400,
-        'height'                    => 400,
-        'flex-width'                => true,
-        'flex-height'                => true,
-        'wp-head-callback'            => '',
-        'admin-head-callback'        => '',
-        'video'                        => false,
-        'admin-preview-callback'    => 'color_wamp_admin_header_image',
     )));
 
     add_theme_support('title-tag');
@@ -737,7 +726,7 @@ function color_wamp_customizer_panel($wp_customize)
         'type'     => 'checkbox',
         'label'    => __("Check to display the article navigational links.", "color-wamp"),
         'section'  => 'color_wamp_bf_nav_links_options',
-        'settings' => 'color_wamp_bf_nav_links_settings',
+        'settings' => 'color_wamp_bf_nav_links_settings'
     ));
     // End of the Additional Options
 
@@ -746,14 +735,14 @@ function color_wamp_customizer_panel($wp_customize)
         'capability'  => 'edit_theme_options',
         'description' => __("Change the Footer Settings from here as you want", "color-wamp"),
         'priority'    => 172,
-        'title'       => __("Footer Options", "color-wamp"),
+        'title'       => __("Footer Options", "color-wamp")
     ));
 
     // Footer Copyright
     $wp_customize->add_section('color_wamp_footer_copyright_text_section', array(
         'priority' => 1,
         'title'    => __("Copyright", "color-wamp"),
-        'panel'    => 'color_wamp_footer_options',
+        'panel'    => 'color_wamp_footer_options'
     ));
 
     $wp_customize->add_setting('color_wamp_footer_copyright_activate', array(
@@ -766,27 +755,27 @@ function color_wamp_customizer_panel($wp_customize)
         'type'     => 'checkbox',
         'label'    => __("Check to activate the footer copyright text", "color-wamp"),
         'section'  => 'color_wamp_footer_copyright_text_section',
-        'settings' => 'color_wamp_footer_copyright_activate',
+        'settings' => 'color_wamp_footer_copyright_activate'
     ));
 
     $wp_customize->add_setting('color_wamp_footer_copyright_text', array(
-        'default'           => '',
+        'default'           => __("Copyright 2019", "color-wamp"),
         'capability'        => 'edit_theme_options',
-        "sanitize_callback" => " wp_filter_nohtml_kses()"
+        "sanitize_callback" => "sanitize_text_field"
     ));
 
     $wp_customize->add_control('color_wamp_footer_copyright_text', array(
         'type'     => 'text',
         'label'    => __("Footer copyright text", "color-wamp"),
         'section'  => 'color_wamp_footer_copyright_text_section',
-        'settings' => 'color_wamp_footer_copyright_text',
+        'settings' => 'color_wamp_footer_copyright_text'
     ));
 
     // Footer Rights
     $wp_customize->add_section('color_wamp_footer_rights_text_section', array(
         'priority' => 1,
-        'title'    => 'Rights',
-        'panel'    => 'color_wamp_footer_options',
+        'title'    => __("Rights", "color-wamp"),
+        'panel'    => 'color_wamp_footer_options'
     ));
 
     $wp_customize->add_setting('color_wamp_footer_rights_activate', array(
@@ -803,23 +792,23 @@ function color_wamp_customizer_panel($wp_customize)
     ));
 
     $wp_customize->add_setting('color_wamp_footer_rights_text', array(
-        'default'           => '',
+        'default'           => __("All rights reserved.", "color-wamp"),
         'capability'        => 'edit_theme_options',
-        "sanitize_callback" => " wp_filter_nohtml_kses()"
+        "sanitize_callback" => "sanitize_text_field"
     ));
 
     $wp_customize->add_control('color_wamp_footer_rights_text', array(
         'type'     => 'text',
         'label'    => __("Footer rights text", "color-wamp"),
         'section'  => 'color_wamp_footer_rights_text_section',
-        'settings' => 'color_wamp_footer_rights_text',
+        'settings' => 'color_wamp_footer_rights_text'
     ));
 
     // Footer WordPress
     $wp_customize->add_section('color_wamp_footer_wordpress_section', array(
         'priority' => 1,
-        'title'    => 'WordPress Link',
-        'panel'    => 'color_wamp_footer_options',
+        'title'    => __("WordPress Link", "color-wamp"),
+        'panel'    => 'color_wamp_footer_options'
     ));
 
     $wp_customize->add_setting('color_wamp_footer_wordpress_activate', array(
@@ -832,7 +821,7 @@ function color_wamp_customizer_panel($wp_customize)
         'type'     => 'checkbox',
         'label'    => __("Check to activate the footer copyright text", "color-wamp"),
         'section'  => 'color_wamp_footer_wordpress_section',
-        'settings' => 'color_wamp_footer_wordpress_activate',
+        'settings' => 'color_wamp_footer_wordpress_activate'
     ));
 }
 
@@ -840,21 +829,21 @@ add_action("customize_register", "color_wamp_customizer_panel");
 
 
 // Modify comments header text in comments
-add_filter('genesis_title_comments', 'child_title_comments');
-function child_title_comments()
+add_filter('genesis_title_comments', 'color_wamp_child_title_comments');
+function color_wamp_child_title_comments()
 {
     return '<h3>' . comments_number(__('No Responses', 'color-wamp'), __('1 Response', 'color-wamp'), __('% Responses...', 'color-wamp')) . '</h3>';
 }
 
 // Unset URL from comment form
-function move_comment_form_below($fields)
+function color_wamp_move_comment_form_below($fields)
 {
     $comment_field = $fields['comment'];
     unset($fields['comment']);
     $fields['comment'] = $comment_field;
     return $fields;
 }
-add_filter('comment_form_fields', 'move_comment_form_below');
+add_filter('comment_form_fields', 'color_wamp_move_comment_form_below');
 
 function color_wamp_comment_form_defaults($defaults)
 {
@@ -867,6 +856,8 @@ function color_wamp_comment_form_defaults($defaults)
 }
 add_filter('comment_form_defaults', 'color_wamp_comment_form_defaults', 10, 1);
 
+
+// reserved hookname for comments callback, can't be renamed
 function simple_callback($comment, $args, $depth)
 {
     print '<li><div class="left mr-1">' . get_avatar($comment, $args['avatar_size']) . '</div>' . '<div class="left"><h4 style="line-height: ' . esc_html($args['avatar_size']) . 'px" class="m-0">' . get_comment_author_link() . "</h4>";
@@ -962,7 +953,7 @@ function color_wamp_sanitize_file($file, $setting)
     //if file has a valid mime type return it, otherwise return default
     return ($file_ext['ext'] ? $file : $setting->default);
 }
-function wpdocs_theme_name_wp_title($title, $sep)
+function color_wamp_wp_title($title, $sep)
 {
     if (is_feed()) {
         return $title;
@@ -985,4 +976,4 @@ function wpdocs_theme_name_wp_title($title, $sep)
     }
     return $title;
 }
-add_filter('wp_title', 'wpdocs_theme_name_wp_title', 10, 2);
+add_filter('wp_title', 'color_wamp_wp_title', 10, 2);

@@ -21,15 +21,15 @@
             <p class="grey-text">
             <?php
             if (is_author()) {
-                esc_html_e("Author", "color-wamp").": <strong>".esc_html(ucfirst(get_the_author()))."</strong>";
+                echo esc_html("Author", "color-wamp").": <strong>".esc_html(ucfirst(get_the_author()))."</strong>";
             } elseif (is_category()) {
-                esc_html_e("Category", "color-wamp").": <strong>".single_cat_title('', false) ."</strong>";
+                echo esc_html("Category", "color-wamp").": <strong>".single_cat_title('', false) ."</strong>";
             } elseif (is_day()) {
-                esc_html_e("Day", "color-wamp").": <strong>".get_the_time("jS F, Y")."</strong>";
+                echo esc_html("Day", "color-wamp").": <strong>".get_the_time("jS F, Y")."</strong>";
             } elseif (is_month()) {
-                esc_html_e("Month", "color-wamp").": <strong>".single_month_title(' ', false)."</strong>";
+                echo esc_html("Month", "color-wamp").": <strong>".single_month_title(' ', false)."</strong>";
             } elseif (is_year()) {
-                esc_html_e("Year", "color-wamp").": <strong>".get_the_time("Y")."</strong>";
+                echo esc_html("Year", "color-wamp").": <strong>".get_the_time("Y")."</strong>";
             } ?>
             </strong></p>
         </nav>

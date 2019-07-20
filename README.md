@@ -18,7 +18,7 @@ It also works great with WP 5.0 - and also should with WP 3.1 - but we only test
 
 ## Screenshots 
 
-* screenshot.png - https://www.wampinfotech.com/images/screenshot.png - Color WAMP Homepage with default banner and dummy post (running with WordPress 5.0 here)
+* screenshot.png - https://www.wampinfotech.com/images/screenshot.png
 
 ## Installation guidelines
  1. In your admin panel, go to Appearance > Themes and click the Add New button.
@@ -54,6 +54,14 @@ All available options can be used from Appearance->Customize
 
 
 ## Changelog
+
+### Version 1.3.5
+* Banner Image changed
+* Screenshot updated
+* CDN replaces with internal imports
+* Theme Slugs managed
+* Escaping texts improved
+* Footer customization optimized
 
 ### Version 1.3.4
 * Default Logo Images removed
