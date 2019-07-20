@@ -566,6 +566,8 @@ hr.thin {
 .force-a-white {
     background-color: #666;
     background-blend-mode: hard-light;
+    background-size: cover;
+    background-position: center;
 }
 
 .pin-top nav.white {

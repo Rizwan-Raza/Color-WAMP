@@ -54,7 +54,7 @@
                 if (comments_open() || '0' != get_comments_number()) {
                     comments_template();
                 } ?>
-                <?php edit_post_link('Edit', '<br /><i class="material-icons">&#xe3c9</i>'); ?>
+                <?php edit_post_link('<i class="material-icons left">&#xe3c9</i> Edit', '<br />'); ?>
             </div>
         </div>
     <?php
