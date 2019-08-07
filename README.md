@@ -30,8 +30,7 @@ It also works great with WP 5.0 - and also should with WP 3.1 - but we only test
 ## COPYRIGHT AND LICENSE
 
 Resources packed within the theme.
-* [MaterilizeCSS](http://materializecss.com/)
-* [Google Fonts](http://fonts.google.com/)
+* [MaterializeCSS](http://materializecss.com/) [MIT License](https://github.com/Dogfalo/materialize/blob/v1-dev/LICENSE)
 * [Screenshot screenshot.png](https://www.wampinfotech.com/images/screenshot.png)
 * [Banner Image back_banner.jpg](https://www.pexels.com/photo/group-hand-fist-bump-1068523/)
 * Social Vector Images (f.svg, i.svg, l.svg, p.svg ...)

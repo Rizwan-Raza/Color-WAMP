@@ -1,14 +1,14 @@
 == COLOR WAMP  ==
 Color WAMP is reponsive magazine style theme for 2019.
 Requires at least: 4.8
-Tested up to: 5.1.1
+Tested up to: 5.2.2
 Requires PHP: 5.2.4
-Version: 1.3.5
+Version: 1.3.6
 Stable tag: 1.3.3
 License: GNU General Public License, version 3 (GPLv3)
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 Tags: two-columns, right-sidebar, flexible-header, custom-header, custom-background, custom-menu, custom-colors, threaded-comments, featured-images, theme-options, post-formats, footer-widgets, blog, news
-Contributors: none
+Contributors: WAMP Infotech Pvt Ltd
 Donate link: https://www.wampinfotech.com/pay
 
 
@@ -16,9 +16,9 @@ Donate link: https://www.wampinfotech.com/pay
 
 == Frequently Asked Questions ==
 
-= Does this plugin work with newest WP version and also older versions? =
-Yes, this plugin works really fine with WordPress 5.1!
-It also works great with WP 5.0 - and also should with WP 4.8 - but we only tested extensively with WP 5.1 and 5.1.1 So you always should run the latest WordPress version for a lot of reasons.
+= Does this theme work with newest WP version and also older versions? =
+Yes, this theme works really fine with WordPress 5.1!
+It also works great with WP 5.0 - and also should with WP 4.8 - but we only tested extensively with WP 5.1 and 5.2.2 So you always should run the latest WordPress version for a lot of reasons.
 
 /**********************************************************/
 
@@ -39,8 +39,7 @@ It also works great with WP 5.0 - and also should with WP 4.8 - but we only test
 == COPYRIGHT AND LICENSE ==
 
 Resources packed within the theme.
-* MaterilizeCSS http://materializecss.com/
-* Google Fonts http://fonts.google.com/
+* MaterializeCSS http://materializecss.com/ [MIT License](https://github.com/Dogfalo/materialize/blob/v1-dev/LICENSE)
 * Screenshot screenshot.png - https://www.wampinfotech.com/images/screenshot.png
 * Images in the screenshot is from https://www.pexels.com/photo/two-person-standing-under-lot-of-bullet-cctv-camera-374103/ License: CC0 Public Domain
 * Banner Image back_banner.jpg is from https://www.pexels.com/photo/two-person-standing-under-lot-of-bullet-cctv-camera-374103/ License: CC0 Public Domain

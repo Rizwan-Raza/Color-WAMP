@@ -1,9 +1,9 @@
 <?php
 function color_wamp_styles()
 {
-    wp_enqueue_style("materializecss_css", get_template_directory_uri() . "/styles/materialize.min.css");
-    wp_enqueue_style("theme_wamp_material_icons", get_template_directory_uri() . "/styles/material-icons.css");
-    wp_enqueue_style("main_style", get_stylesheet_uri());
+    wp_enqueue_style("color_wamp_materializecss_css", get_template_directory_uri() . "/styles/materialize.min.css");
+    wp_enqueue_style("color_wamp_material_icons", get_template_directory_uri() . "/styles/material-icons.css");
+    wp_enqueue_style("color_wamp_main_style", get_stylesheet_uri());
 
     $custom_css = "
     .primary,
@@ -32,15 +32,15 @@ function color_wamp_styles()
             background-color: " . esc_attr(get_theme_mod("color_wamp_theme_color_setting", "#3d85c6")) . "
         }";
     }
-    wp_add_inline_style("main_style", $custom_css);
+    wp_add_inline_style("color_wamp_main_style", $custom_css);
 }
 
 function color_wamp_scripts()
 {
-    wp_enqueue_script("materializecss_js", get_template_directory_uri() . "/js/materialize.min.js", array(), "1.0.0", true);
-    wp_enqueue_script("script_js", get_template_directory_uri() . "/js/script.js", array(), "1.0.0", true);
+    wp_enqueue_script("color_wamp_materializecss_js", get_template_directory_uri() . "/js/materialize.min.js", array(), "1.0.0", true);
+    wp_enqueue_script("scolor_wamp_cript_js", get_template_directory_uri() . "/js/script.js", array(), "1.0.0", true);
     if (get_theme_mod('color_wamp_home_search_header_setting', 1)) {
-        wp_enqueue_script("search_script", get_template_directory_uri() . "/js/search.js");
+        wp_enqueue_script("color_wamp_search_script", get_template_directory_uri() . "/js/search.js");
     }
 }
 add_action("wp_enqueue_scripts", "color_wamp_styles");
@@ -74,18 +74,28 @@ function color_wamp_main_header_menu_classes($classes, $item, $args, $depth)
 
 add_filter('nav_menu_css_class', 'color_wamp_main_header_menu_classes', 1, 4);
 
+
+add_filter( 'get_custom_logo', 'color_wamp_change_logo_class' );
+
+
+function color_wamp_change_logo_class( $html ) {
+
+    $html = str_replace( 'custom-logo-link', 'brand-logo mx-3', $html );
+    $html = str_replace( 'custom-logo', 'brand-img', $html );
+
+    return $html;
+}
+
 function color_wamp_custom_logo_setup()
 {
     $defaults = array(
-        "height" => 57,
-        "width" => 57,
+        "height" => 50,
+        "width" => 150,
         "flex_height" => true,
         "flex_width" => true
     );
 
     add_theme_support("custom-logo", $defaults);
-
-    // load_theme_textdomain('color-wamp', get_template_directory() . '/languages');
 }
 
 add_action("after_setup_theme", "color_wamp_custom_logo_setup");
@@ -802,26 +812,6 @@ function color_wamp_customizer_panel($wp_customize)
         'label'    => __("Footer rights text", "color-wamp"),
         'section'  => 'color_wamp_footer_rights_text_section',
         'settings' => 'color_wamp_footer_rights_text'
-    ));
-
-    // Footer WordPress
-    $wp_customize->add_section('color_wamp_footer_wordpress_section', array(
-        'priority' => 1,
-        'title'    => __("WordPress Link", "color-wamp"),
-        'panel'    => 'color_wamp_footer_options'
-    ));
-
-    $wp_customize->add_setting('color_wamp_footer_wordpress_activate', array(
-        'default'           => 1,
-        'capability'        => 'edit_theme_options',
-        "sanitize_callback" => "color_wamp_checkbox_sanitize"
-    ));
-
-    $wp_customize->add_control('color_wamp_footer_wordpress_activate', array(
-        'type'     => 'checkbox',
-        'label'    => __("Check to activate the footer copyright text", "color-wamp"),
-        'section'  => 'color_wamp_footer_wordpress_section',
-        'settings' => 'color_wamp_footer_wordpress_activate'
     ));
 }
 

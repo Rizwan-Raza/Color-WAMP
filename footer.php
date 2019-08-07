@@ -32,9 +32,7 @@
       <?php if (has_custom_logo()) {
         ?>
         <div class="left mr-2 logo">
-          <img src="<?php $img = wp_get_attachment_image_src(get_theme_mod('custom_logo'), "
-          full");
-                    echo esc_url($img[0]) ?>" alt="<?php bloginfo('name') ?>" />
+          <?php the_custom_logo(); ?>
         </div>
       <?php
       } ?>
@@ -49,7 +47,7 @@
       <?php if (get_theme_mod("color_wamp_social_link_activate_settings") and (get_theme_mod('color_wamp_social_link_location_option', 'both') == "both" or get_theme_mod('color_wamp_social_link_location_option') == "footer")) {
         ?>
         <div class="social-links">
-          <h5>Follow Us:</h5>
+          <h5><?php esc_html_e('Follow Us:', 'color-wamp') ?></h5>
           <?php $social = get_theme_mod("color_wamp_social_f");
           if (!empty($social)) {
             ?>
@@ -166,8 +164,8 @@
       <?php if (get_theme_mod("color_wamp_footer_copyright_activate")) { ?>
         <?php $text = get_theme_mod("color_wamp_footer_copyright_text");
         if (empty($text)) {
-          ?>Copyright &copy; 20<?php echo esc_html(date("y")) ?>
-        <?php
+          esc_html_e('Copyright &copy; 20', 'color-wamp');
+          echo esc_html(date("y"));
         } else {
           echo esc_html(get_theme_mod("color_wamp_footer_copyright_text"));
         } ?> <span class="mx-1">|</span>
@@ -187,21 +185,14 @@
       ?> </p>
   </div>
   <div class="right">
-    <p class="my-1 text-primary-light"><a href="<?php home_url() ?>" class="white-text"><strong>Color WAMP</strong></a>
-      by <a href="https://www.wampinfotech.com/team" class="white-text"><strong>WAMP Infotech</strong></a>
-      <?php if (get_theme_mod("color_wamp_footer_wordpress_activate")) {
-        ?> <span class="mx-1">|</span>
-        Powered by <a href="https://wordpress.org/" class="white-text"><strong>WordPress</strong></a>
-      <?php
-      } ?> </p>
+    <p class="my-1 text-primary-light"><a href="<?php echo esc_url(wp_get_theme()->get('ThemeURI')) ?>" class="white-text"><strong><?php echo get_current_theme(); ?></strong></a>
+      by <a href="<?php echo esc_url(wp_get_theme()->get('AuthorURI')) ?>" class="white-text"><strong><?php echo esc_html(wp_get_theme()->get('Author')) ?></strong></a>
+    </p>
   </div>
   <br clear="both" />
 </footer>
 
 <?php wp_footer(); ?>
-<?php if (is_singular()) {
-  wp_enqueue_script("comment-reply");
-} ?>
 </body>
 
 </html>

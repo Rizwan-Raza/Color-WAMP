@@ -17,26 +17,19 @@
 </head>
 
 <body <?php body_class("custom-background") ?>>
-    <?php
-    if (!isset($content_width)) {
-        $content_width = 1140;
-    }
-    ?>
     <nav class="nav-extended">
         <div class="nav-wrapper white">
-            <a href="<?php echo esc_url(home_url()) ?>" class="brand-logo mx-3">
-                <?php if (has_custom_logo()) {
-                    ?>
-                    <img src="<?php $img = wp_get_attachment_image_src(get_theme_mod('custom_logo'), "full");
-                                echo esc_url($img[0]) ?>" alt="<?php bloginfo('name') ?>" class="brand-img hide-on-small-only" />
-                <?php
-                } ?>
-                <h1>
-                    <?php bloginfo('name') ?>
-                    <small class="grey-text hide-on-small-only">
-                        <?php bloginfo('description') ?></small>
-                </h1>
-            </a>
+            <?php if (has_custom_logo()) {
+                the_custom_logo();
+            } else { ?>
+                <a href="<?php echo esc_url(home_url()) ?>" class="brand-logo mx-3">
+                    <h1>
+                        <?php bloginfo('name') ?>
+                        <small class="grey-text hide-on-small-only">
+                            <?php bloginfo('description') ?></small>
+                    </h1>
+                </a>
+            <?php } ?>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <?php if (get_theme_mod("color_wamp_social_link_activate_settings") and (get_theme_mod('color_wamp_social_link_location_option', 'both') == "both" or get_theme_mod('color_wamp_social_link_location_option') == "header")) {
                 ?>
