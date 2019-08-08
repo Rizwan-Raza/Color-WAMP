@@ -42,6 +42,7 @@ function color_wamp_scripts()
     if (get_theme_mod('color_wamp_home_search_header_setting', 1)) {
         wp_enqueue_script("color_wamp_search_script", get_template_directory_uri() . "/js/search.js");
     }
+    if (is_singular()) wp_enqueue_script("comment-reply");
 }
 add_action("wp_enqueue_scripts", "color_wamp_styles");
 add_action("wp_enqueue_scripts", "color_wamp_scripts");
@@ -75,13 +76,14 @@ function color_wamp_main_header_menu_classes($classes, $item, $args, $depth)
 add_filter('nav_menu_css_class', 'color_wamp_main_header_menu_classes', 1, 4);
 
 
-add_filter( 'get_custom_logo', 'color_wamp_change_logo_class' );
+add_filter('get_custom_logo', 'color_wamp_change_logo_class');
 
 
-function color_wamp_change_logo_class( $html ) {
+function color_wamp_change_logo_class($html)
+{
 
-    $html = str_replace( 'custom-logo-link', 'brand-logo mx-3', $html );
-    $html = str_replace( 'custom-logo', 'brand-img', $html );
+    $html = str_replace('custom-logo-link', 'brand-logo mx-3', $html);
+    $html = str_replace('custom-logo', 'brand-img', $html);
 
     return $html;
 }

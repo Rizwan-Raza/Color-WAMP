@@ -185,7 +185,7 @@
       ?> </p>
   </div>
   <div class="right">
-    <p class="my-1 text-primary-light"><a href="<?php echo esc_url(wp_get_theme()->get('ThemeURI')) ?>" class="white-text"><strong><?php echo get_current_theme(); ?></strong></a>
+    <p class="my-1 text-primary-light"><a href="<?php echo esc_url(wp_get_theme()->get('ThemeURI')) ?>" class="white-text"><strong><?php echo wp_get_theme()->get('Name') ?></strong></a>
       by <a href="<?php echo esc_url(wp_get_theme()->get('AuthorURI')) ?>" class="white-text"><strong><?php echo esc_html(wp_get_theme()->get('Author')) ?></strong></a>
     </p>
   </div>

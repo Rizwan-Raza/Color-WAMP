@@ -10,8 +10,8 @@ Color WAMP is reponsive magazine style theme for 2019.
 
 ## Frequently Asked Questions 
 
-### Does this plugin work with newest WP version and also older versions?
-Yes, this plugin works really fine with WordPress 5.1!
+### Does this theme work with newest WP version and also older versions?
+Yes, this theme works really fine with WordPress 5.1!
 It also works great with WP 5.0 - and also should with WP 3.1 - but we only tested extensively with WP 5.1 and 5.1.1 So you always should run the latest WordPress version for a lot of reasons.
 
 

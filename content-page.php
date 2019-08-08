@@ -9,14 +9,14 @@
                 ?>
                 <div class="card-content">
                 <?php
-            } ?>
+                } ?>
                 <a href="<?php the_permalink() ?>" class="grey-text text-darken-3 primary-text-hover"><span class="card-title">
                         <h3><?php the_title() ?></h3>
                     </span></a>
                 <?php if (has_post_thumbnail()) {
                     ?> </div>
                 <div class="card-content"> <?php
-                                    } ?>
+                                        } ?>
                 <?php if (get_the_modified_time() != get_the_time()) { ?>
                     <time class="left mr-2"><a href="<?php echo esc_url(get_day_link(get_the_modified_time('Y'), get_the_modified_time('m'), get_the_modified_time('d'))) ?>" class="grey-text primary-text-hover tooltipped" data-tooltip="Last updated: <?php echo esc_attr(get_the_modified_time("D, j M Y \a\\t h:i A")) ?>"><i class="material-icons left mr-1">&#xe923</i> <?php echo esc_html(human_time_diff(get_the_modified_time('U'), current_time('timestamp'))) . ' ago' ?></a></time>
                 <?php } ?>
@@ -30,7 +30,7 @@
                     ?>
                     <a href="<?php echo esc_url(get_category_link($item->term_id)) ?>"><span class="chip white-text right" style="background-color: <?php echo esc_attr(get_theme_mod('color_wamp_category_color_' . $item->term_id, get_theme_mod("color_wamp_theme_color_setting", "#3d85c6"))) ?>" data-badge-caption=""><?php echo esc_html($item->name) ?></span></a>
                 <?php
-            } ?>
+                } ?>
                 <div class="clearfix"></div>
                 <br />
                 <?php the_excerpt() ?>
@@ -41,4 +41,4 @@
             </div>
         </div>
     <?php
-} ?>
+    } ?>
